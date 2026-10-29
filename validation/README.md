@@ -1,6 +1,6 @@
 # Validation of this snapshot
 
-Published from source commit `9c9d32b` on 2026-10-29. Everything below was produced by the
+Published from source commit `0ba30d9` on 2026-10-29. Everything below was produced by the
 design's gates and tests on that commit; the raw outputs are in [`reports/`](reports/).
 
 **Status: rev A is a gated, unbuilt design.** No physical board has been tested yet. The checks
