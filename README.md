@@ -139,4 +139,4 @@ follows the [Contributor Covenant](CODE_OF_CONDUCT.md).
 Details and credits (including the scouter doodle, after fan art by camarinox; Dragon Ball ©
 Bird Studio/Shueisha, Toei Animation) in [LICENSES/README.md](LICENSES/README.md).
 
-<sub>Published from source commit `9c9d32b` on 2026-10-29.</sub>
+<sub>Published from source commit `0ba30d9` on 2026-10-29.</sub>
