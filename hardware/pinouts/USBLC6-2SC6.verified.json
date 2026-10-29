@@ -1,0 +1,65 @@
+{
+  "mpn": "USBLC6-2SC6",
+  "package": "SOT-23-6L",
+  "datasheet": {
+    "file": "datasheets/USBLC6-2SC6.pdf",
+    "revision": "Doc ID 11265 Rev 5, October 2011 (STMicroelectronics)",
+    "pages": [
+      1,
+      2
+    ]
+  },
+  "pins": [
+    {
+      "number": "1",
+      "name": "I/O1",
+      "type": "bidirectional",
+      "page": 1
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "ground",
+      "page": 1
+    },
+    {
+      "number": "3",
+      "name": "I/O2",
+      "type": "bidirectional",
+      "page": 1
+    },
+    {
+      "number": "4",
+      "name": "I/O2",
+      "type": "bidirectional",
+      "page": 1
+    },
+    {
+      "number": "5",
+      "name": "VBUS",
+      "type": "power_in",
+      "page": 1
+    },
+    {
+      "number": "6",
+      "name": "I/O1",
+      "type": "bidirectional",
+      "page": 1
+    }
+  ],
+  "params": {
+    "vbr_min_v": {
+      "value": 6,
+      "page": 2
+    }
+  },
+  "notes": "Pins from the functional diagram (Figure 1, page 1, top view), which is the only pin map in the datasheet; the SOT23-6L package drawing (page 12) does not print pin numbers, so the numbering follows the diagram and must be confirmed in pass2. Pin 1 and pin 6 are both I/O1, pins 3 and 4 are both I/O2 (paired pins per the diagram), as printed. VBUS typed power_in per the requested convention; the datasheet only calls it the protected line. No abs_max_v or rec_v stated in Table 1 (absolute ratings list only ESD peak pulse voltage VPP = 15 kV IEC contact/air, 25 kV MIL-STD-883G, storage and junction temperatures), so none recorded. Params omitted: vrwm_v is not stated as a rating; the only reverse voltage is VRM = 5.25 V as a leakage-current test condition (IRM, Table 2, page 2), not a stand-off rating, so it was not recorded as vrwm_v. vcl_v_at_ipp omitted: Table 2 gives VCL = 12 V (max) at IPP = 1 A and 17 V (max) at IPP = 5 A, two test points and no single stated Ipp, so the human should choose which to record. ipp_a omitted: Ipp appears only as a test condition, no peak pulse current rating is stated. Other values on page 2 (VF, Ci/o-GND, IRM) are not in the requested param list and were not extracted.",
+  "verified": {
+    "date": "2026-10-22",
+    "method": "two independent extractions agreed",
+    "passes": [
+      "USBLC6-2SC6.pass1.json",
+      "USBLC6-2SC6.pass2.json"
+    ]
+  }
+}

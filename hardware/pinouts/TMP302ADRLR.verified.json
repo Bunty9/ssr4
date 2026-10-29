@@ -1,0 +1,101 @@
+{
+  "mpn": "TMP302ADRLR",
+  "package": "SOT-563 (DRL), 6 pins",
+  "datasheet": {
+    "file": "datasheets/TMP302ADRLR.pdf",
+    "revision": "SBOS488E, revised December 2018",
+    "pages": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      13
+    ]
+  },
+  "pins": [
+    {
+      "number": "1",
+      "name": "TRIPSET0",
+      "type": "input",
+      "page": 3,
+      "abs_max_v": [
+        -0.5,
+        4
+      ]
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "ground",
+      "page": 3
+    },
+    {
+      "number": "3",
+      "name": "OUT",
+      "type": "open_drain",
+      "page": 3,
+      "abs_max_v": [
+        -0.5,
+        4
+      ]
+    },
+    {
+      "number": "4",
+      "name": "HYSTSET",
+      "type": "input",
+      "page": 3,
+      "abs_max_v": [
+        -0.5,
+        4
+      ]
+    },
+    {
+      "number": "5",
+      "name": "VS",
+      "type": "power_in",
+      "page": 3,
+      "rec_v": [
+        1.4,
+        3.6
+      ]
+    },
+    {
+      "number": "6",
+      "name": "TRIPSET1",
+      "type": "input",
+      "page": 3,
+      "abs_max_v": [
+        -0.5,
+        4
+      ]
+    }
+  ],
+  "params": {
+    "trip_c_tripset1_vs_tripset0_gnd": {
+      "value": 60,
+      "page": 7
+    },
+    "hysteresis_c_hystset_gnd": {
+      "value": 5,
+      "page": 5
+    },
+    "hysteresis_c_hystset_vs": {
+      "value": 10,
+      "page": 5
+    },
+    "trip_accuracy_max_c": {
+      "value": 2,
+      "page": 5
+    }
+  },
+  "notes": "Pin table p3 (Pin Functions): OUT is open drain, active low. Abs max p4: supply 4 V max, no minimum printed (so no abs_max_v on VS); input and output pins -0.5 to 4 V, inputs also <= VS + 0.3 V. Corrected 2026-10-29 by the human's decision after consensus flagged the inferred -0.5 V supply minimum; OUT sink current 10 mA max. Rec p4: VS 1.4-3.6 V (nom 3.3), pull-up 10-100 kohm from OUT to VS. Trip point table p7 (Table 1): TMP302A with TRIPSET1=VS, TRIPSET0=GND trips at 60 C. Accuracy p5: +-0.2 typ, +-2 C max (TA -40..125, VS 1.4-3.6). Hysteresis p5: 5 C (HYSTSET=GND), 10 C (HYSTSET=VS). Orderable addendum p13: TMP302ADRLR active, SOT-5X3 (DRL) 6 pins, -40 to 125 C.",
+  "verified": {
+    "date": "2026-10-29",
+    "method": "two independent extractions agreed",
+    "passes": [
+      "TMP302ADRLR.pass1.json",
+      "TMP302ADRLR.pass2.json"
+    ]
+  }
+}

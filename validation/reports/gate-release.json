@@ -1,0 +1,193 @@
+{
+  "board": "ssr4",
+  "stage": "release",
+  "time": "2026-10-29T16:59:50",
+  "ok": true,
+  "results": [
+    {
+      "gate": "placeholders in circuit code",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "parts registry",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "netlist export",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "design tests (pytest)",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "parts vs netlist",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "pinout consensus status",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "pins vs datasheet",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "ERC",
+      "status": "PASS (warnings)",
+      "errors": [],
+      "warnings": [
+        "lib_symbol_mismatch: Symbol 'Fuse' doesn't match copy in library 'Device' [Symbol F2 [Fuse] @(22.86, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'Fuse' doesn't match copy in library 'Device' [Symbol F3 [Fuse] @(30.48, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'Fuse' doesn't match copy in library 'Device' [Symbol F4 [Fuse] @(36.83, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'Fuse' doesn't match copy in library 'Device' [Symbol F5 [Fuse] @(43.18, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector' [Symbol X2 [Screw_Terminal_01x02] @(64.77, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector' [Symbol X3 [Screw_Terminal_01x02] @(87.63, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector' [Symbol X4 [Screw_Terminal_01x02] @(110.49, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector' [Symbol X5 [Screw_Terminal_01x02] @(133.35, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'Logo_Open_Hardware_Small' doesn't match copy in library 'Graphic' [Symbol LOGO1 [Logo_Open_Hardware_Small] @(144.78, 35.56)]",
+        "lib_symbol_mismatch: Symbol 'Logo_Open_Hardware_Small' doesn't match copy in library 'Graphic' [Symbol LOGO2 [Logo_Open_Hardware_Small] @(161.29, 35.56)]",
+        "lib_symbol_mismatch: Symbol 'Logo_Open_Hardware_Small' doesn't match copy in library 'Graphic' [Symbol LOGO3 [Logo_Open_Hardware_Small] @(177.8, 35.56)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R8 [R] @(24.13, 120.65)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R9 [R] @(30.48, 120.65)]",
+        "lib_symbol_mismatch: Symbol 'ESP32-C3-MINI-1-H4X' doesn't match copy in library 'ssr4' [Symbol U1 [ESP32-C3-MINI-1-H4X] @(46.99, 66.04)]",
+        "lib_symbol_mismatch: Symbol 'SW_Push' doesn't match copy in library 'Switch' [Symbol SW1 [SW_Push] @(48.26, 114.3)]",
+        "lib_symbol_mismatch: Symbol 'SW_Push' doesn't match copy in library 'Switch' [Symbol SW2 [SW_Push] @(72.39, 114.3)]",
+        "lib_symbol_mismatch: Symbol 'USB_C_Receptacle_USB2.0_16P' doesn't match copy in library 'Connector' [Symbol J1 [USB_C_Receptacle_USB2.0_16P] @(86.36, 48.26)]",
+        "lib_symbol_mismatch: Symbol 'Thermistor_NTC' doesn't match copy in library 'Device' [Symbol TH1 [Thermistor_NTC] @(90.17, 120.65)]",
+        "lib_symbol_mismatch: Symbol 'PWR_FLAG' doesn't match copy in library 'power' [Symbol #FLG3 [PWR_FLAG] @(99.06, 114.3)]",
+        "lib_symbol_mismatch: Symbol 'TestPoint' doesn't match copy in library 'Connector' [Symbol TP2 [TestPoint] @(104.14, 114.3)]",
+        "lib_symbol_mismatch: Symbol 'TestPoint' doesn't match copy in library 'Connector' [Symbol TP3 [TestPoint] @(109.22, 114.3)]",
+        "lib_symbol_mismatch: Symbol 'TestPoint' doesn't match copy in library 'Connector' [Symbol TP4 [TestPoint] @(114.3, 114.3)]",
+        "lib_symbol_mismatch: Symbol 'TestPoint' doesn't match copy in library 'Connector' [Symbol TP5 [TestPoint] @(119.38, 114.3)]",
+        "lib_symbol_mismatch: Symbol 'TestPoint' doesn't match copy in library 'Connector' [Symbol TP6 [TestPoint] @(124.46, 114.3)]",
+        "lib_symbol_mismatch: Symbol 'TestPoint' doesn't match copy in library 'Connector' [Symbol TP7 [TestPoint] @(129.54, 114.3)]",
+        "lib_symbol_mismatch: Symbol 'USBLC6-2SC6' doesn't match copy in library 'Power_Protection' [Symbol U3 [USBLC6-2SC6] @(138.43, 40.64)]",
+        "lib_symbol_mismatch: Symbol 'C' doesn't match copy in library 'Device' [Symbol C4 [C] @(163.83, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'C' doesn't match copy in library 'Device' [Symbol C5 [C] @(172.72, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'C' doesn't match copy in library 'Device' [Symbol C6 [C] @(182.88, 38.1)]",
+        "lib_symbol_mismatch: Symbol 'C' doesn't match copy in library 'Device' [Symbol C7 [C] @(191.77, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'LED' doesn't match copy in library 'Device' [Symbol D3 [LED] @(208.28, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R1 [R] @(223.52, 38.1)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R10 [R] @(229.87, 45.72)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R2 [R] @(237.49, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R3 [R] @(245.11, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R4 [R] @(251.46, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R5 [R] @(259.08, 46.99)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R6 [R] @(265.43, 46.99)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R7 [R] @(273.05, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'CPC40055ST' doesn't match copy in library 'ssr4' [Symbol K3 [CPC40055ST] @(41.91, 36.83)]",
+        "lib_symbol_mismatch: Symbol 'AO3400A' doesn't match copy in library 'Transistor_FET' [Symbol Q4 [AO3400A] @(68.58, 40.64)]",
+        "lib_symbol_mismatch: Symbol 'LED' doesn't match copy in library 'Device' [Symbol D6 [LED] @(87.63, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R19 [R] @(102.87, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R20 [R] @(110.49, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R21 [R] @(116.84, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'HLK-PM01' doesn't match copy in library 'Converter_ACDC' [Symbol PS1 [HLK-PM01] @(39.37, 34.29)]",
+        "lib_symbol_mismatch: Symbol 'AMS1117-3.3' doesn't match copy in library 'Regulator_Linear' [Symbol U2 [AMS1117-3.3] @(72.39, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'C_Polarized' doesn't match copy in library 'Device' [Symbol C1 [C_Polarized] @(93.98, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'C' doesn't match copy in library 'Device' [Symbol C2 [C] @(102.87, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'C_Polarized' doesn't match copy in library 'Device' [Symbol C3 [C_Polarized] @(113.03, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'D_Schottky' doesn't match copy in library 'Device' [Symbol D1 [D_Schottky] @(128.27, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'Fuse' doesn't match copy in library 'Device' [Symbol F1 [Fuse] @(144.78, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'Varistor' doesn't match copy in library 'Device' [Symbol RV1 [Varistor] @(152.4, 40.64)]",
+        "lib_symbol_mismatch: Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector' [Symbol X1 [Screw_Terminal_01x02] @(170.18, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'PWR_FLAG' doesn't match copy in library 'power' [Symbol #FLG1 [PWR_FLAG] @(177.8, 33.02)]",
+        "lib_symbol_mismatch: Symbol 'PWR_FLAG' doesn't match copy in library 'power' [Symbol #FLG2 [PWR_FLAG] @(185.42, 33.02)]",
+        "lib_symbol_mismatch: Symbol 'TestPoint' doesn't match copy in library 'Connector' [Symbol TP1 [TestPoint] @(190.5, 33.02)]",
+        "lib_symbol_mismatch: Symbol 'CPC40055ST' doesn't match copy in library 'ssr4' [Symbol K4 [CPC40055ST] @(41.91, 36.83)]",
+        "lib_symbol_mismatch: Symbol 'AO3400A' doesn't match copy in library 'Transistor_FET' [Symbol Q5 [AO3400A] @(68.58, 40.64)]",
+        "lib_symbol_mismatch: Symbol 'LED' doesn't match copy in library 'Device' [Symbol D7 [LED] @(87.63, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R22 [R] @(104.14, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R23 [R] @(111.76, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R24 [R] @(118.11, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'CPC40055ST' doesn't match copy in library 'ssr4' [Symbol K1 [CPC40055ST] @(41.91, 36.83)]",
+        "lib_symbol_mismatch: Symbol 'AO3400A' doesn't match copy in library 'Transistor_FET' [Symbol Q2 [AO3400A] @(68.58, 40.64)]",
+        "lib_symbol_mismatch: Symbol 'LED' doesn't match copy in library 'Device' [Symbol D4 [LED] @(87.63, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R13 [R] @(101.6, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R14 [R] @(109.22, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R15 [R] @(116.84, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'TMP302ADRLR' doesn't match copy in library 'ssr4' [Symbol U7 [TMP302ADRLR] @(49.53, 35.56)]",
+        "lib_symbol_mismatch: Symbol 'AO3400A' doesn't match copy in library 'Transistor_FET' [Symbol Q1 [AO3400A] @(92.71, 44.45)]",
+        "lib_symbol_mismatch: Symbol 'C' doesn't match copy in library 'Device' [Symbol C8 [C] @(102.87, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R11 [R] @(111.76, 43.18)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R12 [R] @(118.11, 43.18)]",
+        "lib_symbol_mismatch: Symbol 'CPC40055ST' doesn't match copy in library 'ssr4' [Symbol K2 [CPC40055ST] @(41.91, 36.83)]",
+        "lib_symbol_mismatch: Symbol 'AO3400A' doesn't match copy in library 'Transistor_FET' [Symbol Q3 [AO3400A] @(68.58, 40.64)]",
+        "lib_symbol_mismatch: Symbol 'LED' doesn't match copy in library 'Device' [Symbol D5 [LED] @(87.63, 31.75)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R16 [R] @(102.87, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R17 [R] @(110.49, 39.37)]",
+        "lib_symbol_mismatch: Symbol 'R' doesn't match copy in library 'Device' [Symbol R18 [R] @(116.84, 44.45)]"
+      ]
+    },
+    {
+      "gate": "DRC",
+      "status": "PASS (warnings)",
+      "errors": [],
+      "warnings": [
+        "silk_overlap: Silkscreen clearance [Reference field of TP1 @(131.707, 112.9132); Segment of C1 on F.Silkscreen @(129.623237, 112.5625)]",
+        "silk_overlap: Silkscreen clearance [Reference field of SW2 @(111.9406, 101.4043); Segment of U2 on F.Silkscreen @(109.6683, 101.424)]",
+        "silk_overlap: Silkscreen clearance [Segment of F5 on F.Silkscreen @(97.6703, 63.0723); Polygon of X5 on F.Silkscreen @(96.7511, 62.42)]",
+        "silk_overlap: Silkscreen clearance [Segment of F4 on F.Silkscreen @(85.657, 63.0723); Polygon of X4 on F.Silkscreen @(84.7378, 62.42)]",
+        "silk_overlap: Silkscreen clearance [Segment of F3 on F.Silkscreen @(73.6437, 63.0723); Polygon of X3 on F.Silkscreen @(72.7244, 62.42)]",
+        "silk_overlap: Silkscreen clearance [Segment of Q4 on F.Silkscreen @(91.8, 106.8147); Reference field of Q5 @(91.8533, 107.5747)]",
+        "silk_overlap: Silkscreen clearance [Reference field of Q5 @(91.8533, 107.5747); Segment of Q4 on F.Silkscreen @(91.8, 108.3347)]",
+        "silk_overlap: Silkscreen clearance [Segment of R21 on F.Silkscreen @(89.372059, 110.3536); Reference field of SW1 @(90.495, 110.786)]",
+        "silk_overlap: Silkscreen clearance [Reference field of SW1 @(90.495, 110.786); Segment of R21 on F.Silkscreen @(89.372059, 111.1136)]",
+        "silk_overlap: Silkscreen clearance [Segment of K3 on F.Silkscreen @(88.07, 111.3247); Reference field of Q4 @(87.84, 107.5747)]",
+        "silk_overlap: Silkscreen clearance [Segment of F2 on F.Silkscreen @(61.6303, 63.0723); Polygon of X2 on F.Silkscreen @(60.7111, 62.42)]",
+        "silk_over_copper: Silkscreen clipped by solder mask [Reference field of SW1 @(90.495, 110.786); Pad 2 [GND] of R21 on F.Cu @(90.0357, 110.7336)]",
+        "silk_over_copper: Silkscreen clipped by solder mask [Reference field of Q5 @(91.8533, 107.5747); Pad 2 [SSR_RTN] of Q4 on F.Cu @(91.19, 108.5122)]",
+        "silk_edge_clearance: Silkscreen clipped by board edge [Segment on Edge.Cuts @(140.0, 125.0); Segment of U1 on F.Silkscreen @(113.4278, 108.45)]",
+        "silk_edge_clearance: Silkscreen clipped by board edge [Segment on Edge.Cuts @(140.0, 125.0); Segment of U1 on F.Silkscreen @(126.6278, 108.45)]",
+        "silk_edge_clearance: Silkscreen clipped by board edge [Segment on Edge.Cuts @(140.0, 125.0); Segment of U1 on F.Silkscreen @(126.6278, 125.05)]",
+        "silk_edge_clearance: Silkscreen clipped by board edge [Segment on Edge.Cuts @(140.0, 125.0); Circle of U1 on F.Silkscreen @(126.6278, 125.05)]",
+        "silk_edge_clearance: Silkscreen clipped by board edge [Segment on Edge.Cuts @(140.0, 50.0); Reference field of PS1 @(139.7389, 84.5167)]",
+        "silk_edge_clearance: Silkscreen clipped by board edge [Segment on Edge.Cuts @(140.0, 125.0); Segment of J1 on F.Silkscreen @(97.3078, 123.05)]",
+        "silk_edge_clearance: Silkscreen clipped by board edge [Segment on Edge.Cuts @(140.0, 125.0); Segment of J1 on F.Silkscreen @(97.3078, 124.95)]",
+        "silk_edge_clearance: Silkscreen clipped by board edge [Segment on Edge.Cuts @(140.0, 125.0); Segment of J1 on F.Silkscreen @(106.7078, 123.05)]"
+      ]
+    },
+    {
+      "gate": "fab rules (jlcpcb)",
+      "status": "PASS (warnings)",
+      "errors": [],
+      "warnings": [
+        "rule min_clearance is unset (0): DRC cannot catch features below the fab's 0.16 mm",
+        "rule min_text_height = 0.8 mm is below JLCPCB minimum 1.0 mm",
+        "rule min_text_thickness = 0.08 mm is below JLCPCB minimum 0.15 mm"
+      ]
+    },
+    {
+      "gate": "3D models",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "fab package (jlcpcb)",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "preflight (jlcpcb, assembly=standard)",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

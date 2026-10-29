@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use or build on this design, please cite it as below."
+title: "SSR4: open-source 4-channel 230 VAC solid-state switch for Home Assistant"
+type: software
+authors:
+  - alias: "Bunty9"
+repository-code: "https://github.com/Bunty9/ssr4"
+license: CERN-OHL-S-2.0
+date-released: "2026-10-29"
+keywords:
+  - open hardware
+  - ESP32-C3
+  - ESPHome
+  - Home Assistant
+  - solid state relay
+  - KiCad

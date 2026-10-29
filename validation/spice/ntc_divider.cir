@@ -1,0 +1,16 @@
+* ssr4 NTC divider into ESP32-C3 ADC1 (IO0): 3V3 - 10k - NTC node - NTC - GND, 100 nF at the pin.
+* NTC SDNT1608X103F3950FTF: R25 = 10k, B25/50 = 3950 K (SDNT series datasheet p3).
+* The NTC is a behavioural current source I = V/R(T); the board temperature is the DC source VT
+* (1 V = 1 degC) so a .dc sweep walks the temperature. Run: ngspice -b ntc_divider.cir
+VDD vdd 0 DC 3.3
+VT  t   0 DC 25
+RTOP vdd n 10k
+BNTC n 0 I = V(n) / (10e3 * exp(3950 * (1/(V(t) + 273.15) - 1/298.15)))
+CADC n 0 100n
+* (the node's time constant is at most 10k || 10k * 100 nF = 0.5 ms at 25 C, against a 5 s
+*  ADC sample interval, so only the DC transfer matters)
+.control
+dc VT -20 110 5
+print V(n)
+.endc
+.end

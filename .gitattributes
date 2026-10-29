@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary
+*.step binary
+*.wrl text
+*.kicad_pcb text
+*.kicad_sch text
+# fabrication files stay byte-for-byte as generated (the BOM/CPL use CRLF)
+hardware/fabrication/** -text

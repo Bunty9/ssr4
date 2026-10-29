@@ -1,0 +1,231 @@
+# boardforge build config for ssr4. See boards/devboard/boardforge.toml for a filled example
+# and boardforge's src/boardforge/config.py for every key.
+
+[design]
+file = "circuit"
+top = "build"
+
+[fab]
+name = "jlcpcb"
+tier = "standard"              # standard (1-2 layers) | multilayer
+
+[board]
+size = [90, 75]                # mm [assumed]: requirements said <= 90 x 60; the SSR row (38 mm parts),
+                               # HLK-PM01 (34 x 20) and ESP module do not fit 60 mm with mains/SELV separation
+layers = 2
+fiducials = false              # boardforge places them anywhere, incl. inside the mains gap;
+                               # JLCPCB panel fiducials: confirm at order (research/decisions.md)
+mounting_holes = { footprint = "MountingHole:MountingHole_3.2mm_M3", inset = 3.5 }  # non-plated: no copper near mains
+pours = ["GND"]                # SELV side only in effect: rules.kicad_dru keeps 6.5 mm from mains copper
+
+[rules]
+track_width = 0.25
+clearance = 0.2
+via_diameter = 0.6             # JLCPCB board setup minimum is 0.5 mm
+via_drill = 0.3
+
+# Floorplan (size accepted by the human 2026-10-22): mains along the top (terminals, SSR AC pins, fuse, MOV, HLK input), SELV
+# below (SSR LED pins, drivers, ESP, USB). SSRs and HLK rot 270 puts their AC pins at the top
+# (footprint pads: SSR pin 1 at x = -13.97; HLK AC pins at x = 0, outputs at x = 29.08).
+[[placement.anchor]]
+ref = "X1"
+at = [72.0, 7.0]
+rot = 0                        # pads along the edge (facing="top" stacked them onto it)
+edge = "top"
+
+[[placement.anchor]]
+ref = "X2"
+at = [10.0, 7.0]
+rot = 0                        # pads along the edge (facing="top" stacked them onto it)
+edge = "top"
+
+[[placement.anchor]]
+ref = "X3"
+at = [22.0, 7.0]
+rot = 0                        # pads along the edge (facing="top" stacked them onto it)
+edge = "top"
+
+[[placement.anchor]]
+ref = "X4"
+at = [34.0, 7.0]
+rot = 0                        # pads along the edge (facing="top" stacked them onto it)
+edge = "top"
+
+[[placement.anchor]]
+ref = "X5"
+at = [46.0, 7.0]
+rot = 0                        # pads along the edge (facing="top" stacked them onto it)
+edge = "top"
+
+[[placement.anchor]]
+ref = "K1"
+at = [12.0, 41.0]
+rot = 270
+
+[[placement.anchor]]
+ref = "K2"
+at = [24.0, 41.0]
+rot = 270
+
+[[placement.anchor]]
+ref = "K3"
+at = [36.0, 41.0]
+rot = 270
+
+[[placement.anchor]]
+ref = "K4"
+at = [48.0, 41.0]
+rot = 270
+
+[[placement.anchor]]                 # channel fuse, vertical under the terminal's L_IN pad, so
+ref = "F2"                          # L_OUT runs straight down beside it (review H1)
+at = [9.30, 14.5]
+rot = 270
+
+[[placement.anchor]]                 # channel fuse, vertical under the terminal's L_IN pad, so
+ref = "F3"                          # L_OUT runs straight down beside it (review H1)
+at = [21.30, 14.5]
+rot = 270
+
+[[placement.anchor]]                 # channel fuse, vertical under the terminal's L_IN pad, so
+ref = "F4"                          # L_OUT runs straight down beside it (review H1)
+at = [33.30, 14.5]
+rot = 270
+
+[[placement.anchor]]                 # channel fuse, vertical under the terminal's L_IN pad, so
+ref = "F5"                          # L_OUT runs straight down beside it (review H1)
+at = [45.30, 14.5]
+rot = 270
+
+[[placement.anchor]]
+ref = "PS1"
+at = [80.0, 20.0]
+rot = 270
+
+[[placement.anchor]]
+ref = "F1"
+at = [60.0, 12.0]
+rot = 90
+
+[[placement.anchor]]
+ref = "RV1"
+at = [60.0, 24.0]
+rot = 90
+
+[[placement.anchor]]                 # rot 180: antenna (footprint -y) at the bottom edge, with a
+ref = "U1"                           # copper keep-out in the footprint (lib/ssr4.pretty)
+at = [70.0, 64.0]
+rot = 180
+edge = "bottom"
+
+[[placement.anchor]]
+ref = "J1"
+at = [52.0, 71.0]
+facing = "bottom"
+edge = "bottom"
+
+[[placement.anchor]]              # BOOT button: the placer put it beside K4's AC pins (mains zone);
+ref = "SW1"                       # left of R7 so the USB-C fan-out has room
+at = [40.5, 64.5]
+
+# USB-C fan-out (three routes left J1 pads open with the placer's spread): ESD right above the
+# connector, rot 180 puts VBUS (pin 5) on the left towards J1's VBUS pads and D1, D+ (pins 1, 6)
+# on the bottom row and D- (3, 4) on the top row, each leaving right to its 22 ohm resistor and
+# U1. CC resistors sit outside the connector body so the D+/D-/VBUS channel above J1 stays free.
+[[placement.anchor]]
+ref = "U3"
+at = [52.0, 59.5]
+rot = 180
+
+[[placement.anchor]]
+ref = "R5"
+at = [56.0, 60.45]
+
+[[placement.anchor]]
+ref = "R6"
+at = [56.0, 58.55]
+
+[[placement.anchor]]
+ref = "R7"
+at = [46.5, 64.0]
+rot = 90
+
+[[placement.anchor]]
+ref = "R8"
+at = [57.5, 64.0]
+rot = 90
+
+[[placement.anchor]]              # silkscreen safety label in the free lower-left area
+ref = "LOGO1"
+at = [21.0, 67.0]
+
+# Hardware over-temperature cutoff (rule 11): the TMP302 must feel the SSRs, so it sits between
+# K2 and K3 below their LED pins (SSR bodies end at x = 25.9 / 34.1; mains pad 2 at y ~ 37, so
+# y >= 48.5 keeps the 6.5 mm mains-SELV rule with margin; the first run's region from 46 let a
+# capacitor land 6.37 mm from K2 pad 2). Its MOSFET, pull-up, sense resistor and capacitor stay
+# in the same small region.
+[[placement.anchor]]
+ref = "U7"
+at = [30.0, 51.5]
+
+[[placement.region]]
+sheet = "thermal_cutoff"
+rect = [26.5, 48.5, 33.5, 58.0]
+
+# (Design review 2026-10-29 M1 wants TH1 between the SSRs. Tried at (30, 47): Freerouting, which
+# does not see rules.kicad_dru, ran the NTC trace 5.2 mm from K3/K4 pad 2 and the U1 pin cluster
+# no longer routed. TH1 stays at the module for rev A; rev B needs a keep-out or a 4-layer board.)
+
+# U2's 22 uF output tantalum: the placer puts a passive next to an IC on its net, and +3V3 now
+# also feeds U7, so C3 followed U7 between the SSRs. Keep it at the regulator.
+[[placement.anchor]]
+ref = "C3"
+at = [55.0, 46.0]
+rot = 90
+
+# U2 (AMS1117) where the 2026-10-28 layout had it, beside PS1's outputs: unanchored, the placer
+# moved it among the mains fuses once C3 was pinned.
+[[placement.anchor]]
+ref = "U2"
+at = [61.5, 48.0]
+rot = 0
+
+# The cutoff MOSFET under U7 (the placer put it between K1 and K2, outside the region).
+[[placement.anchor]]
+ref = "Q1"
+at = [30.0, 55.5]
+rot = 0
+
+# Terminal and mounting-hole labels: the footprint's texts are at board coordinates.
+[[placement.anchor]]
+ref = "LOGO3"
+at = [0.0, 0.0]
+
+# Silkscreen doodle (human, 2026-10-29) in the free area between K4 and PS1, below RV1.
+[[placement.anchor]]
+ref = "LOGO2"
+at = [58.5, 36.0]
+
+[[placement.region]]
+sheet = "mcu"
+rect = [14.0, 52.0, 62.0, 75.0]
+
+[[placement.region]]
+sheet = "power"
+rect = [76.0, 54.0, 90.0, 66.0]
+
+[routing]
+chain = ["freerouting", "astar"]
+# J1's 0.5 mm-pitch inner pads (D+/D-/CC1/CC2) are routed first with A* at 0.2 mm and locked,
+# data pairs first; Freerouting left them open in every run (see PLAN.md).
+preroute = ["USB_DM_CONN", "USB_DP_CONN", "/mcu1/N$1", "/mcu1/N$2", "VBUS", "/mcu1/USB_DP",
+            "/mcu1/STRAP_IO8", "/mcu1/BOOT", "CH1_CTRL", "CH2_CTRL", "CH3_CTRL", "CH4_CTRL", "HW_OT_SENSE"]  # every J1 net, then every U1 signal net in the IO4-IO9 pad cluster: Freerouting left 2-5 of them open in four runs on 2026-10-29 (human chose to pre-route them); needs the A* NPTH/keep-out patch (patches/boardforge, PLAYBOOK §8)
+
+[routing.astar]
+passes = 4                     # passes 5-10 routed nothing in the 2026-10-28 run (2-3 min each)
+
+[libraries.footprints]
+ssr4 = "lib/ssr4.pretty"
+
+[datasheets]
+search = ["../../datasheets"]

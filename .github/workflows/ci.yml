@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  firmware:
+    name: Firmware (ESPHome PC simulation + tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install ESPHome and the test harness
+        run: |
+          pip install "esphome==2026.10.0"
+          pip install -e ".[test]"
+      - name: Validate the real-board configuration (throwaway secrets)
+        run: |
+          python - <<'PY'
+          import base64, os
+          key = base64.b64encode(os.urandom(32)).decode()
+          open("firmware/secrets.yaml", "w").write(
+              'wifi_ssid: "ci"\nwifi_password: "ci-password"\nfallback_ap_password: "ci-password"\n'
+              f'ota_password: "ci"\napi_encryption_key: "{key}"\n')
+          PY
+          esphome config firmware/ssr4.yaml > /dev/null
+      - name: Build the PC simulation
+        run: esphome compile firmware/sim.yaml
+      - name: Behaviour tests
+        run: pytest firmware/tests --lg-env firmware/targets/host.yaml
+
+  hardware:
+    name: Hardware (KiCad 10 ERC + DRC)
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0.7-full
+      options: --user root
+    steps:
+      - uses: actions/checkout@v4
+      - name: ERC (errors fail the build)
+        run: kicad-cli sch erc --severity-error --exit-code-violations -o erc.rpt hardware/kicad/ssr4/circuit.kicad_sch
+      - name: DRC with mains clearance rules and schematic parity (errors fail the build)
+        run: kicad-cli pcb drc --schematic-parity --severity-error --exit-code-violations -o drc.rpt hardware/kicad/ssr4/circuit.kicad_pcb
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kicad-reports
+          path: "*.rpt"

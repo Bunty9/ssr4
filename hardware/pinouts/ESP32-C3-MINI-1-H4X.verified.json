@@ -1,0 +1,365 @@
+{
+  "mpn": "ESP32-C3-MINI-1-H4X",
+  "package": "ESP32-C3-MINI-1 module, 53 pads",
+  "datasheet": {
+    "file": "datasheets/ESP32-C3-MINI-1-H4X.pdf",
+    "revision": "v2.2",
+    "pages": [
+      10,
+      11,
+      13,
+      21
+    ]
+  },
+  "pins": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in",
+      "page": 11,
+      "abs_max_v": [
+        -0.3,
+        3.6
+      ],
+      "rec_v": [
+        3.0,
+        3.6
+      ]
+    },
+    {
+      "number": "4",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "5",
+      "name": "IO2",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "6",
+      "name": "IO3",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "7",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "8",
+      "name": "EN",
+      "type": "input",
+      "page": 11
+    },
+    {
+      "number": "9",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "10",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "11",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "12",
+      "name": "IO0",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "13",
+      "name": "IO1",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "14",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "15",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "16",
+      "name": "IO10",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "17",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "18",
+      "name": "IO4",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "19",
+      "name": "IO5",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "20",
+      "name": "IO6",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "21",
+      "name": "IO7",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "22",
+      "name": "IO8",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "23",
+      "name": "IO9",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "24",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "25",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "26",
+      "name": "IO18",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "27",
+      "name": "IO19",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "28",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "29",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "30",
+      "name": "RXD0",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "31",
+      "name": "TXD0",
+      "type": "bidirectional",
+      "page": 11
+    },
+    {
+      "number": "32",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "33",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "34",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "35",
+      "name": "NC",
+      "type": "nc",
+      "page": 11
+    },
+    {
+      "number": "36",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "37",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "38",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "39",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "44",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "45",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "46",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "47",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "48",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "50",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "51",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "52",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    },
+    {
+      "number": "53",
+      "name": "GND",
+      "type": "ground",
+      "page": 11
+    }
+  ],
+  "params": {
+    "rec_vdd_min_v": {
+      "value": 3.0,
+      "page": 21
+    },
+    "rec_vdd_max_v": {
+      "value": 3.6,
+      "page": 21
+    },
+    "supply_current_min_a": {
+      "value": 0.5,
+      "page": 21
+    }
+  },
+  "notes": "Page numbers are PDF page = printed page. Pin table Table 3-1 p11. 3V3 abs max -0.3..3.6 V (Table 6-1 p21, symbol VDD33), rec 3.0..3.6 V typ 3.3 (Table 6-2 p21); external supply must deliver >= 0.5 A (IVDD, p21). Pin names as printed: IO18 = GPIO18/USB_D-, IO19 = GPIO19/USB_D+, RXD0 = GPIO20/U0RXD (pad 30), TXD0 = GPIO21/U0TXD (pad 31); pin-type column is I/O/T for all IOs. Pin 3 is the only 3V3 pad. GND pads: 1,2,11,14,36-53 (53 = central thermal/GND pad group per Fig 3-1 p10; 49 is also center GND). NC pads: 4,7,9,10,15,17,24,25,28,29,32-35. Datasheet: 'Do not leave the EN pin floating' (p11); EN high=on, low=off; VIH_nRST 0.75*VDD, VIL_nRST 0.25*VDD (p21-22). STRAPPING (Section 4, p12-13): GPIO2 (pad 5, IO2), GPIO8 (pad 22, IO8), GPIO9 (pad 23, IO9). Defaults Table 4-1 p12: GPIO2 floating, GPIO8 floating, GPIO9 weak pull-up (1). Boot mode Table 4-3 p13: SPI boot = GPIO2 1, GPIO8 any, GPIO9 1; Joint download boot (USB-Serial-JTAG / UART download) = GPIO2 1, GPIO8 1, GPIO9 0. Footnote p13: GPIO2 does not actually determine these modes but pulling it up is recommended due to glitches. GPIO8 also controls ROM message printing (p12, Table 4-4 p14 not read). Strapping timing: tSU min 0 ms, tH min 3 ms (Table 4-2 p13). Datasheet also says 'the strapping pin mapping between the chip and modules: see Chapter 8' (schematics, not read). Variant note: H4X = ESP32-C3FH4X chip variant per datasheet series; module ordering table p3-4 not read for this suffix. Pin 53 center-pad assignment: Fig 3-1 shows pads 49-53 as GND, consistent with the Table 3-1 range 36-53.",
+  "verified": {
+    "date": "2026-10-22",
+    "method": "two independent extractions agreed",
+    "passes": [
+      "ESP32-C3-MINI-1-H4X.pass1.json",
+      "ESP32-C3-MINI-1-H4X.pass2.json"
+    ]
+  }
+}

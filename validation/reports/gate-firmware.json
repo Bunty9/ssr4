@@ -1,0 +1,34 @@
+{
+  "board": "ssr4",
+  "stage": "firmware",
+  "time": "2026-10-29T17:00:20",
+  "ok": true,
+  "results": [
+    {
+      "gate": "netlist export",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "hardware contract",
+      "status": "PASS (warnings)",
+      "errors": [],
+      "warnings": [
+        "signal ntc: ADC capability of U1 IO0 is not in the verified pinout (unchecked)"
+      ]
+    },
+    {
+      "gate": "firmware builds",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "gate": "firmware tests",
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

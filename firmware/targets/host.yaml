@@ -1,0 +1,22 @@
+# labgrid environment: ssr4 firmware as a Linux program (ESPHome `host` build of sim.yaml).
+# Build it with `esphome compile firmware/sim.yaml`, then run the tests:
+#   pytest firmware/tests --lg-env firmware/targets/host.yaml
+# Features say what this target can prove; tests that need more are skipped, never faked.
+imports:
+  - fwtest.drivers
+targets:
+  main:
+    features:
+      - esphome-api # the device's native API (all targets)
+      - gpio-log # pin writes visible as log lines (host build only)
+      - sim-ntc # NTC node voltage settable from tests (host build only)
+      - sim-hw-cutoff # hardware cutoff settable from tests (host build only)
+    resources:
+      HostProgram:
+        path: ../.esphome/build/ssr4-sim/.pioenvs/ssr4-sim/program
+      ESPHomeAPI:
+        address: 127.0.0.1
+        port: 16053
+        noise_psk: "BzQ69+8J4zOZtsESTkd8VOwf0vydAFuS/bkkOhtNa+s=" # test-only key, see packages/sim_host.yaml
+    drivers:
+      HostProcessDriver: {}

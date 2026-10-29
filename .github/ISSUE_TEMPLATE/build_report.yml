@@ -1,0 +1,38 @@
+name: Build report
+description: You built this board. Tell us how it went, good or bad.
+labels: ["build-report"]
+body:
+  - type: input
+    id: revision
+    attributes:
+      label: Board revision or commit
+    validations:
+      required: true
+  - type: dropdown
+    id: fab
+    attributes:
+      label: Fabrication and assembly
+      options: [JLCPCB with assembly, PCBWay turnkey, Bare PCB + hand assembly, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result
+      description: Did it power up, flash, connect to Home Assistant, switch loads? What loads, for how long?
+    validations:
+      required: true
+  - type: textarea
+    id: measurements
+    attributes:
+      label: Measurements
+      description: Rail voltages, SSR temperature under load, NTC reading vs a thermometer, anything you measured.
+  - type: textarea
+    id: problems
+    attributes:
+      label: Problems and fixes
+  - type: textarea
+    id: photos
+    attributes:
+      label: Photos
+      description: Drag images here. Close-ups of soldering and of the installed board help others.

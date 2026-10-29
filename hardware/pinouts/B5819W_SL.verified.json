@@ -1,0 +1,54 @@
+{
+  "mpn": "B5819W SL",
+  "package": "SOD-123",
+  "datasheet": {
+    "file": "datasheets/B5819W_SL.pdf",
+    "revision": "D,Mar,2015 (Jiangsu Changjiang Electronics)",
+    "pages": [
+      1
+    ]
+  },
+  "pins": [
+    {
+      "number": "1",
+      "name": "K",
+      "type": "passive",
+      "page": 1,
+      "aliases": [
+        "CATHODE"
+      ]
+    },
+    {
+      "number": "2",
+      "name": "A",
+      "type": "passive",
+      "page": 1,
+      "aliases": [
+        "ANODE"
+      ]
+    }
+  ],
+  "params": {
+    "vr_max_v": {
+      "value": 40,
+      "page": 1
+    },
+    "if_avg_max_a": {
+      "value": 1,
+      "page": 1
+    },
+    "vf_max_v_at_1a": {
+      "value": 0.6,
+      "page": 1
+    }
+  },
+  "notes": "Datasheet p1 (shared B5817W-5819W sheet; B5819W column used, marking SL): 'The marking bar indicates the cathode'. Pad numbering 1=K, 2=A is the KiCad diode convention supplied by the requester; the datasheet does not number the pads. VR/VRRM/VRWM/VR 40 V; IO 1 A; VF max 0.6 V at IF=1 A (0.9 V at 3 A); IR max 1 mA at VR=40 V; IFSM 9 A; Tj 125 C. VF test temp Ta=25 C.",
+  "verified": {
+    "date": "2026-10-22",
+    "method": "two independent extractions agreed",
+    "passes": [
+      "B5819W_SL.pass1.json",
+      "B5819W_SL.pass2.json"
+    ]
+  }
+}

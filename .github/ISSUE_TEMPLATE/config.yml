@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Safety or security problem (private)
+    url: https://github.com/Bunty9/ssr4/security/advisories/new
+    about: Mains-safety or firmware-security problems are reported privately, not in a public issue.
+  - name: Guides
+    url: https://github.com/Bunty9/ssr4/tree/main/docs
+    about: Fabrication, firmware, bring-up and installation guides.

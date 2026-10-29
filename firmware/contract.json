@@ -1,0 +1,121 @@
+{
+  "board": "ssr4",
+  "controllers": {
+    "U1": {
+      "mpn": "ESP32-C3-MINI-1-H4X"
+    }
+  },
+  "signals": {
+    "ch1": {
+      "net": "CH1_CTRL",
+      "role": "output",
+      "controller": "U1",
+      "pin": {
+        "number": "6",
+        "name": "IO3"
+      },
+      "active": "high",
+      "safe": {
+        "level": "low",
+        "pull": {
+          "ref": "R15",
+          "value": "2k",
+          "to": "GND"
+        }
+      }
+    },
+    "ch2": {
+      "net": "CH2_CTRL",
+      "role": "output",
+      "controller": "U1",
+      "pin": {
+        "number": "18",
+        "name": "IO4"
+      },
+      "active": "high",
+      "safe": {
+        "level": "low",
+        "pull": {
+          "ref": "R18",
+          "value": "2k",
+          "to": "GND"
+        }
+      }
+    },
+    "ch3": {
+      "net": "CH3_CTRL",
+      "role": "output",
+      "controller": "U1",
+      "pin": {
+        "number": "19",
+        "name": "IO5"
+      },
+      "active": "high",
+      "safe": {
+        "level": "low",
+        "pull": {
+          "ref": "R21",
+          "value": "2k",
+          "to": "GND"
+        }
+      }
+    },
+    "ch4": {
+      "net": "CH4_CTRL",
+      "role": "output",
+      "controller": "U1",
+      "pin": {
+        "number": "20",
+        "name": "IO6"
+      },
+      "active": "high",
+      "safe": {
+        "level": "low",
+        "pull": {
+          "ref": "R24",
+          "value": "2k",
+          "to": "GND"
+        }
+      }
+    },
+    "ntc": {
+      "net": "/mcu1/NTC",
+      "role": "adc",
+      "controller": "U1",
+      "pin": {
+        "number": "12",
+        "name": "IO0"
+      }
+    },
+    "status_led": {
+      "net": "/mcu1/STATUS_LED",
+      "role": "output",
+      "controller": "U1",
+      "pin": {
+        "number": "16",
+        "name": "IO10"
+      },
+      "active": "high"
+    },
+    "boot": {
+      "net": "/mcu1/BOOT",
+      "role": "input",
+      "controller": "U1",
+      "pin": {
+        "number": "23",
+        "name": "IO9"
+      },
+      "active": "low"
+    },
+    "hw_overtemp": {
+      "net": "HW_OT_SENSE",
+      "role": "input",
+      "controller": "U1",
+      "pin": {
+        "number": "13",
+        "name": "IO1"
+      },
+      "active": "low"
+    }
+  }
+}

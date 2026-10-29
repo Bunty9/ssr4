@@ -1,0 +1,76 @@
+{
+  "mpn": "AO3400A",
+  "package": "SOT-23",
+  "datasheet": {
+    "file": "datasheets/AO3400A.pdf",
+    "revision": "Rev 3: Dec 2011",
+    "pages": [
+      1,
+      2
+    ]
+  },
+  "pins": [
+    {
+      "number": "1",
+      "name": "G",
+      "type": "input",
+      "page": 1,
+      "aliases": [
+        "GATE"
+      ],
+      "abs_max_v": [
+        -12,
+        12
+      ]
+    },
+    {
+      "number": "2",
+      "name": "S",
+      "type": "passive",
+      "page": 1,
+      "aliases": [
+        "SOURCE"
+      ]
+    },
+    {
+      "number": "3",
+      "name": "D",
+      "type": "passive",
+      "page": 1,
+      "aliases": [
+        "DRAIN"
+      ]
+    }
+  ],
+  "params": {
+    "vgs_th_max_v": {
+      "value": 1.45,
+      "page": 2
+    },
+    "vgs_th_min_v": {
+      "value": 0.65,
+      "page": 2
+    },
+    "rds_on_max_ohm_vgs_2v5": {
+      "value": 0.048,
+      "page": 2
+    },
+    "vds_max_v": {
+      "value": 30,
+      "page": 1
+    },
+    "vgs_max_v": {
+      "value": 12,
+      "page": 1
+    }
+  },
+  "notes": "SOT23 Top View figure p1 shows D on the single-pin side, G and S on the two-pin side; pin numbers are NOT printed in the datasheet. Pad numbers 1=G, 2=S, 3=D follow the standard SOT-23 numbering (pins 1,2 on bottom row left to right when viewed from top, 3 on the top) applied to the drawing: G bottom-left, S bottom-right, D top. Needs confirmation against footprint. VDS max 30 V, VGS +/-12 V (abs max p1). Drain abs_max_v lower bound -0.3 is NOT stated by the datasheet (only +30 V VDS); gate -12 lower bound is the stated +/-12; treat drain min as unknown. VGS(th) 0.65 min / 1.05 typ / 1.45 max at VDS=VGS, ID=250 uA (p2). RDS(on) max 48 mOhm at VGS=2.5 V, ID=3 A (p2). No abs_max_v written for the D pin because the datasheet states only a one-sided max (AMS1117 VIN 15 V, p2; AO3400A VDS 30 V, p1; CPC40055ST reverse input 5 V, p2); the lower bound is unknown.",
+  "verified": {
+    "date": "2026-10-22",
+    "method": "two independent extractions agreed",
+    "passes": [
+      "AO3400A.pass1.json",
+      "AO3400A.pass2.json"
+    ]
+  }
+}

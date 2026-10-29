@@ -1,0 +1,21 @@
+# ssr4 firmware for the real board: ESPHome for Home Assistant (local API, OTA, no cloud).
+# Pins:   pins.yaml, generated from the board's netlist (do not edit)
+# Build:  cp secrets.example.yaml secrets.yaml (edit) && esphome compile ssr4.yaml
+# Flash first time over USB-C with mains DISCONNECTED: esphome run ssr4.yaml --device /dev/ttyACM0
+# The same behaviour runs on the PC as sim.yaml; tests: firmware/tests/.
+
+substitutions:
+  name: ssr4
+  friendly_name: SSR4
+
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+  project:
+    name: bunty9.ssr4
+    version: "0.2.0"
+
+packages:
+  pins: !include pins.yaml
+  logic: !include packages/logic.yaml
+  hw: !include packages/hw_esp32.yaml

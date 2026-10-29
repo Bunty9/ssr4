@@ -1,0 +1,28 @@
+lcsc,mpn,manufacturer,designators,qty_per_board,order_qty,library_type,stock,min_order_qty,unit_price_usd_at_order_qty,line_cost_usd,mpn_matches,notes
+C2977551,RVT1C221M0605,ROQANG,C1,1,5,extended,335772,1,0.0513,0.2565,yes,
+C96446,CL10A106MA8NRNC,Samsung,"C2,C4",2,10,basic,4102707,1,0.0356,0.356,yes,
+C122226,CA45-B016K226T,Hunan Xiangyee,C3,1,5,extended,52061,1,0.1729,0.8645,yes,
+C1525,CL05B104KO5NNNC,Samsung,"C5,C7,C8",3,15,basic,33584571,1,0.0031,0.0465,yes,qty updated 2026-10-29 for the thermal cutoff (unit price of 2026-10-28)
+C52923,CL05A105KA5NQNC,Samsung,C6,1,5,basic,10953771,1,0.0064,0.032,yes,
+C8598,B5819W SL,CJ,D1,1,5,basic,614706,1,0.0261,0.1305,yes,
+C2986060,19-217/R6C-AL1M2VY/6T,Everlight,D3-D7,5,25,extended,3692534,1,0.0151,0.3775,yes,
+C99566,39211000000,Littelfuse,F1,1,5,extended,30432,1,0.0739,0.3695,yes,
+C142678,39212000000,Littelfuse,F2-F5,4,20,extended,36899,1,0.0873,1.746,yes,
+C165948,TYPE-C-31-M-12,HRO,J1,1,5,extended,296962,1,0.1871,0.9355,yes,
+C1527353,CPC40055ST,Littelfuse/IXYS,K1-K4,4,20,extended,113,1,24.3194,486.388,yes,LOW STOCK (113 vs 10x order qty 200); price tiers odd: reel_qty 13; single-unit tier 5+ applied
+C209903,HLK-PM01,Hi-Link,PS1,1,5,extended,2420,1,2.7186,13.593,yes,
+C20917,AO3400A,AOS,"Q1,Q2,Q3,Q4,Q5",5,25,basic,1113210,1,0.089,2.225,yes,qty updated 2026-10-29 for the thermal cutoff (unit price of 2026-10-28)
+C25744,0402WGF1002TCE,UNI-ROYAL,"R1,R2,R3,R4,R9,R11",6,30,basic,17744148,1,0.0024,0.072,yes,qty updated 2026-10-29 for the thermal cutoff (unit price of 2026-10-28)
+C25092,0402WGF220JTCE,UNI-ROYAL,"R5,R6",2,10,basic,3106111,1,0.0014,0.014,yes,
+C25905,0402WGF5101TCE,UNI-ROYAL,"R7,R8",2,10,basic,4066937,1,0.0023,0.023,yes,
+C25091,0402WGF2200TCE,UNI-ROYAL,R10,1,5,basic,2043267,1,0.0018,0.009,yes,
+C17957,1206W4F2200T5E,UNI-ROYAL,"R11,R14,R17,R20",4,20,extended,80315,1,0.0057,0.114,yes,
+C4109,0402WGF2001TCE,UNI-ROYAL,"R12,R14,R15,R17,R18,R20,R21,R23,R24",9,45,basic,7008260,1,0.0026,0.1170,yes,qty updated 2026-10-29 for the thermal cutoff (unit price of 2026-10-28); qty updated 2026-10-29: gate pull-downs 100k -> 2k (design review H1) (unit price of 2026-10-28)
+C2839517,10D561K,SURGING,RV1,1,5,extended,44187,1,0.0518,0.259,yes,
+C318884,TS-1187A-B-A-B,XKB,"SW1,SW2",2,10,basic,1152591,1,0.0207,0.207,yes,
+C279936,SDNT1608X103F3950FTF,Sunlord,TH1,1,5,extended,106144,1,0.022,0.11,yes,
+C41349510,ESP32-C3-MINI-1-H4X,Espressif,U1,1,5,extended,2014,1,3.1083,15.5415,yes,
+C6186,AMS1117-3.3,AMS,U2,1,5,basic,1867526,1,0.2062,1.031,yes,
+C7519,USBLC6-2SC6,ST,U3,1,5,extended,42901,1,0.1798,0.899,yes,
+C8465,WJ500V-5.08-2P,Kangnex,X1-X5,5,25,extended,317833,1,0.1347,3.3675,yes,
+C2877557,TMP302ADRLR,Texas Instruments,U7,1,5,extended,38995,1,0.1579,0.7895,yes,added 2026-10-29 (hardware thermal cutoff); jlc_stock_check 2026-10-29

@@ -1,0 +1,14 @@
+# ESPHome
+firmware/.esphome/
+firmware/secrets.yaml
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# KiCad local state
+*.kicad_prl
+*.lck
+fp-info-cache
+*-backups/
+_autosave-*

@@ -1,0 +1,1719 @@
+(kicad_sch
+  (version 20250114)
+  (generator "schematizer")
+  (generator_version "0.2.0")
+  (uuid 3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3)
+  (paper "A4")
+  (title_block
+    (title "SKiDL-Generated Schematic")
+    (date "2026-10-29")
+    (company "")
+    (comment 1 "Generated with SKiDL")
+    (comment 2 "")
+    (comment 3 "")
+    (comment 4 ""))
+  (lib_symbols
+    (symbol "Connector:Screw_Terminal_01x02"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 2.032 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Screw_Terminal_01x02"
+        (at 0 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Screw_Terminal_01x02_1_1"
+        (rectangle
+          (start -1.27 1.27)
+          (end 1.27 -3.81)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background)))
+        (polyline
+          (pts
+            (xy -0.5334 0.3302)
+            (xy 0.3302 -0.508))
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -0.5334 -2.2098)
+            (xy 0.3302 -3.048))
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -0.3556 0.508)
+            (xy 0.508 -0.3302))
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -0.3556 -2.032)
+            (xy 0.508 -2.8702))
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (circle
+          (center 0 0)
+          (radius 0.635)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (circle
+          (center 0 -2.54)
+          (radius 0.635)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "Pin_1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -2.54 0)
+          (length 3.81)
+          (name "Pin_2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "Device:Fuse"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "F"
+        (at 2.032 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Fuse"
+        (at 0 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Fuse"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Fuse_0_1"
+        (rectangle
+          (start -0.762 -2.54)
+          (end 0.762 2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0 -2.54))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Fuse_1_1"
+        (rectangle
+          (start -0.762 -2.54)
+          (end 0.762 2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0 -2.54))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "Graphic:Logo_Open_Hardware_Small"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#SYM"
+        (at 2.032 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Logo_Open_Hardware_Small"
+        (at 0 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Open Hardware logo, small"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Logo_Open_Hardware_Small_0_1"
+        (polyline
+          (pts
+            (xy 3.3528 -4.3434)
+            (xy 3.302 -4.318)
+            (xy 3.175 -4.2418)
+            (xy 2.9972 -4.1148)
+            (xy 2.7686 -3.9624)
+            (xy 2.54 -3.81)
+            (xy 2.3622 -3.7084)
+            (xy 2.2352 -3.6068)
+            (xy 2.1844 -3.5814)
+            (xy 2.159 -3.6068)
+            (xy 2.0574 -3.6576)
+            (xy 1.905 -3.7338)
+            (xy 1.8034 -3.7846)
+            (xy 1.6764 -3.8354)
+            (xy 1.6002 -3.8354)
+            (xy 1.6002 -3.8354)
+            (xy 1.5494 -3.7338)
+            (xy 1.4732 -3.5306)
+            (xy 1.3462 -3.302)
+            (xy 1.2446 -3.0226)
+            (xy 1.1176 -2.7178)
+            (xy 0.9652 -2.413)
+            (xy 0.8636 -2.1082)
+            (xy 0.7366 -1.8288)
+            (xy 0.6604 -1.6256)
+            (xy 0.6096 -1.4732)
+            (xy 0.5842 -1.397)
+            (xy 0.5842 -1.397)
+            (xy 0.6604 -1.3208)
+            (xy 0.7874 -1.2446)
+            (xy 1.0414 -1.016)
+            (xy 1.2954 -0.6858)
+            (xy 1.4478 -0.3302)
+            (xy 1.524 0.0762)
+            (xy 1.4732 0.4572)
+            (xy 1.3208 0.8128)
+            (xy 1.0668 1.143)
+            (xy 0.762 1.3716)
+            (xy 0.4064 1.524)
+            (xy 0 1.5748)
+            (xy -0.381 1.5494)
+            (xy -0.7366 1.397)
+            (xy -1.0668 1.143)
+            (xy -1.2192 0.9906)
+            (xy -1.397 0.6604)
+            (xy -1.524 0.3048)
+            (xy -1.524 0.2286)
+            (xy -1.4986 -0.1778)
+            (xy -1.397 -0.5334)
+            (xy -1.1938 -0.8636)
+            (xy -0.9144 -1.143)
+            (xy -0.8636 -1.1684)
+            (xy -0.7366 -1.27)
+            (xy -0.635 -1.3462)
+            (xy -0.5842 -1.397)
+            (xy -1.0668 -2.5908)
+            (xy -1.143 -2.794)
+            (xy -1.2954 -3.1242)
+            (xy -1.397 -3.4036)
+            (xy -1.4986 -3.6322)
+            (xy -1.5748 -3.7846)
+            (xy -1.6002 -3.8354)
+            (xy -1.6002 -3.8354)
+            (xy -1.651 -3.8354)
+            (xy -1.7272 -3.81)
+            (xy -1.905 -3.7338)
+            (xy -2.0066 -3.683)
+            (xy -2.1336 -3.6068)
+            (xy -2.2098 -3.5814)
+            (xy -2.2606 -3.6068)
+            (xy -2.3622 -3.683)
+            (xy -2.54 -3.81)
+            (xy -2.7686 -3.9624)
+            (xy -2.9718 -4.0894)
+            (xy -3.1496 -4.2164)
+            (xy -3.302 -4.318)
+            (xy -3.3528 -4.3434)
+            (xy -3.3782 -4.3434)
+            (xy -3.429 -4.318)
+            (xy -3.5306 -4.2164)
+            (xy -3.7084 -4.064)
+            (xy -3.937 -3.8354)
+            (xy -3.9624 -3.81)
+            (xy -4.1656 -3.6068)
+            (xy -4.318 -3.4544)
+            (xy -4.4196 -3.3274)
+            (xy -4.445 -3.2766)
+            (xy -4.445 -3.2766)
+            (xy -4.4196 -3.2258)
+            (xy -4.318 -3.0734)
+            (xy -4.2164 -2.8956)
+            (xy -4.064 -2.667)
+            (xy -3.6576 -2.0828)
+            (xy -3.8862 -1.5494)
+            (xy -3.937 -1.3716)
+            (xy -4.0386 -1.1684)
+            (xy -4.0894 -1.0414)
+            (xy -4.1148 -0.9652)
+            (xy -4.191 -0.9398)
+            (xy -4.318 -0.9144)
+            (xy -4.5466 -0.8636)
+            (xy -4.8006 -0.8128)
+            (xy -5.0546 -0.7874)
+            (xy -5.2578 -0.7366)
+            (xy -5.4356 -0.7112)
+            (xy -5.5118 -0.6858)
+            (xy -5.5118 -0.6858)
+            (xy -5.5372 -0.635)
+            (xy -5.5372 -0.5588)
+            (xy -5.5372 -0.4318)
+            (xy -5.5626 -0.2286)
+            (xy -5.5626 0.0762)
+            (xy -5.5626 0.127)
+            (xy -5.5372 0.4064)
+            (xy -5.5372 0.635)
+            (xy -5.5372 0.762)
+            (xy -5.5372 0.8382)
+            (xy -5.5372 0.8382)
+            (xy -5.461 0.8382)
+            (xy -5.3086 0.889)
+            (xy -5.08 0.9144)
+            (xy -4.826 0.9652)
+            (xy -4.8006 0.9906)
+            (xy -4.5466 1.0414)
+            (xy -4.318 1.0668)
+            (xy -4.1656 1.1176)
+            (xy -4.0894 1.143)
+            (xy -4.0894 1.143)
+            (xy -4.0386 1.2446)
+            (xy -3.9624 1.4224)
+            (xy -3.8608 1.6256)
+            (xy -3.7846 1.8288)
+            (xy -3.7084 2.0066)
+            (xy -3.6576 2.159)
+            (xy -3.6322 2.2098)
+            (xy -3.6322 2.2098)
+            (xy -3.683 2.286)
+            (xy -3.7592 2.413)
+            (xy -3.8862 2.5908)
+            (xy -4.064 2.8194)
+            (xy -4.064 2.8448)
+            (xy -4.2164 3.0734)
+            (xy -4.3434 3.2512)
+            (xy -4.4196 3.3782)
+            (xy -4.445 3.4544)
+            (xy -4.445 3.4544)
+            (xy -4.3942 3.5052)
+            (xy -4.2926 3.6322)
+            (xy -4.1148 3.81)
+            (xy -3.937 4.0132)
+            (xy -3.8608 4.064)
+            (xy -3.6576 4.2926)
+            (xy -3.5052 4.4196)
+            (xy -3.4036 4.4958)
+            (xy -3.3528 4.5212)
+            (xy -3.3528 4.5212)
+            (xy -3.302 4.4704)
+            (xy -3.1496 4.3688)
+            (xy -2.9718 4.2418)
+            (xy -2.7432 4.0894)
+            (xy -2.7178 4.0894)
+            (xy -2.4892 3.937)
+            (xy -2.3114 3.81)
+            (xy -2.1844 3.7084)
+            (xy -2.1336 3.683)
+            (xy -2.1082 3.683)
+            (xy -2.032 3.7084)
+            (xy -1.8542 3.7592)
+            (xy -1.6764 3.8354)
+            (xy -1.4732 3.937)
+            (xy -1.27 4.0132)
+            (xy -1.143 4.064)
+            (xy -1.0668 4.1148)
+            (xy -1.0668 4.1148)
+            (xy -1.0414 4.191)
+            (xy -1.016 4.3434)
+            (xy -0.9652 4.572)
+            (xy -0.9144 4.8514)
+            (xy -0.889 4.9022)
+            (xy -0.8382 5.1562)
+            (xy -0.8128 5.3848)
+            (xy -0.7874 5.5372)
+            (xy -0.762 5.588)
+            (xy -0.7112 5.6134)
+            (xy -0.5842 5.6134)
+            (xy -0.4064 5.6134)
+            (xy -0.1524 5.6134)
+            (xy 0.0762 5.6134)
+            (xy 0.3302 5.6134)
+            (xy 0.5334 5.6134)
+            (xy 0.6858 5.588)
+            (xy 0.7366 5.588)
+            (xy 0.7366 5.588)
+            (xy 0.762 5.5118)
+            (xy 0.8128 5.334)
+            (xy 0.8382 5.1054)
+            (xy 0.9144 4.826)
+            (xy 0.9144 4.7752)
+            (xy 0.9652 4.5212)
+            (xy 1.016 4.2926)
+            (xy 1.0414 4.1402)
+            (xy 1.0668 4.0894)
+            (xy 1.0668 4.0894)
+            (xy 1.1938 4.0386)
+            (xy 1.3716 3.9624)
+            (xy 1.5748 3.8608)
+            (xy 2.0828 3.6576)
+            (xy 2.7178 4.0894)
+            (xy 2.7686 4.1402)
+            (xy 2.9972 4.2926)
+            (xy 3.175 4.4196)
+            (xy 3.302 4.4958)
+            (xy 3.3782 4.5212)
+            (xy 3.3782 4.5212)
+            (xy 3.429 4.4704)
+            (xy 3.556 4.3434)
+            (xy 3.7338 4.191)
+            (xy 3.9116 3.9878)
+            (xy 4.064 3.8354)
+            (xy 4.2418 3.6576)
+            (xy 4.3434 3.556)
+            (xy 4.4196 3.4798)
+            (xy 4.4196 3.429)
+            (xy 4.4196 3.4036)
+            (xy 4.3942 3.3274)
+            (xy 4.2926 3.2004)
+            (xy 4.1656 2.9972)
+            (xy 4.0132 2.794)
+            (xy 3.8862 2.5908)
+            (xy 3.7592 2.3876)
+            (xy 3.6576 2.2352)
+            (xy 3.6322 2.159)
+            (xy 3.6322 2.1336)
+            (xy 3.683 2.0066)
+            (xy 3.7592 1.8288)
+            (xy 3.8608 1.6002)
+            (xy 4.064 1.1176)
+            (xy 4.3942 1.0414)
+            (xy 4.5974 1.016)
+            (xy 4.8768 0.9652)
+            (xy 5.1308 0.9144)
+            (xy 5.5372 0.8382)
+            (xy 5.5626 -0.6604)
+            (xy 5.4864 -0.6858)
+            (xy 5.4356 -0.6858)
+            (xy 5.2832 -0.7366)
+            (xy 5.0546 -0.762)
+            (xy 4.8006 -0.8128)
+            (xy 4.5974 -0.8636)
+            (xy 4.3688 -0.9144)
+            (xy 4.2164 -0.9398)
+            (xy 4.1402 -0.9398)
+            (xy 4.1148 -0.9652)
+            (xy 4.064 -1.0668)
+            (xy 3.9878 -1.2446)
+            (xy 3.9116 -1.4478)
+            (xy 3.81 -1.651)
+            (xy 3.7338 -1.8542)
+            (xy 3.683 -2.0066)
+            (xy 3.6576 -2.0828)
+            (xy 3.683 -2.1336)
+            (xy 3.7846 -2.2606)
+            (xy 3.8862 -2.4638)
+            (xy 4.0386 -2.667)
+            (xy 4.191 -2.8956)
+            (xy 4.318 -3.0734)
+            (xy 4.3942 -3.2004)
+            (xy 4.445 -3.2766)
+            (xy 4.4196 -3.3274)
+            (xy 4.3434 -3.429)
+            (xy 4.1656 -3.5814)
+            (xy 3.937 -3.8354)
+            (xy 3.8862 -3.8608)
+            (xy 3.683 -4.064)
+            (xy 3.5306 -4.2164)
+            (xy 3.4036 -4.318)
+            (xy 3.3528 -4.3434))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type outline))))
+      (embedded_fonts no)))
+  (symbol
+    (lib_id "Device:Fuse")
+    (at 22.86 44.45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid ca28ddcd-8ef6-5d51-abce-9da7a8ae6416)
+    (property "Reference" "F2"
+      (at 22.86 41.910000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Fuse"
+      (at 22.86 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:Fuse_Littelfuse_395Series"
+      (at 22.86 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 22.86 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Fuse"
+      (at 22.86 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "39212000000"
+      (at 22.86 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "C142678"
+      (at 22.86 50.800000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "Littelfuse"
+      (at 22.86 52.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid eb8ece33-f8f3-5ea0-888a-df48e6800729))
+    (pin "2"
+      (uuid a601f72c-8e5e-5154-ad58-34ea1b5bec4f))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "F2")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 22.86 40.64)
+      (xy 22.86 38.1))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 027d8285-a350-5b4d-bee5-0de098ef820e))
+  (label "CH1_L_IN"
+    (at 22.86 38.1 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left bottom))
+    (uuid 04577287-1d10-5dfd-ad2e-e6d291634b20))
+  (wire
+    (pts
+      (xy 22.86 48.26)
+      (xy 22.86 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4fd941fe-2fa2-5547-96fc-43f350e3f371))
+  (global_label "CH1_L_FUSED"
+    (shape bidirectional)
+    (at 22.86 50.8 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid 817ffa1d-6d9b-5bf0-b919-34584dc5a5d8))
+  (symbol
+    (lib_id "Device:Fuse")
+    (at 30.48 44.45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid 296c9e59-f23f-5244-bd68-ee864434cb70)
+    (property "Reference" "F3"
+      (at 30.48 41.910000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Fuse"
+      (at 30.48 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:Fuse_Littelfuse_395Series"
+      (at 30.48 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 30.48 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Fuse"
+      (at 30.48 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "39212000000"
+      (at 30.48 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "C142678"
+      (at 30.48 50.800000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "Littelfuse"
+      (at 30.48 52.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 86d54914-8ce8-50c1-9491-9b06ddb59d98))
+    (pin "2"
+      (uuid 8fa39198-1b1b-533a-b248-20b2bfb5f529))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "F3")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 30.48 40.64)
+      (xy 30.48 38.1))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8492672d-a326-565e-b746-ea0369ac7e47))
+  (label "CH2_L_IN"
+    (at 30.48 38.1 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left bottom))
+    (uuid 25a9341a-93d4-5d64-805b-940681bd1356))
+  (wire
+    (pts
+      (xy 30.48 48.26)
+      (xy 30.48 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3663b9dc-2922-5bee-b89c-600dee35649e))
+  (global_label "CH2_L_FUSED"
+    (shape bidirectional)
+    (at 30.48 50.8 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid c4f3905f-e4e5-5a8a-8763-53adf1197736))
+  (symbol
+    (lib_id "Device:Fuse")
+    (at 36.83 44.45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid 1b6fd1f3-7cee-5c2e-9767-3ecaefdc58a0)
+    (property "Reference" "F4"
+      (at 36.83 41.910000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Fuse"
+      (at 36.83 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:Fuse_Littelfuse_395Series"
+      (at 36.83 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 36.83 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Fuse"
+      (at 36.83 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "39212000000"
+      (at 36.83 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "C142678"
+      (at 36.83 50.800000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "Littelfuse"
+      (at 36.83 52.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid e1ff76e5-9efc-5dcb-9b49-751870ab2ec5))
+    (pin "2"
+      (uuid 87234e7f-9731-5ed1-8c32-b14b489956d1))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "F4")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 36.83 40.64)
+      (xy 36.83 38.1))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 52c4d840-8dc8-5982-a75b-bde8ea4099c6))
+  (label "CH3_L_IN"
+    (at 36.83 38.1 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left bottom))
+    (uuid 12b3e274-2f39-54ea-ab5a-385a95d23b9b))
+  (wire
+    (pts
+      (xy 36.83 48.26)
+      (xy 36.83 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4ddaa3d4-2ff8-5142-8264-a23481ed5e56))
+  (global_label "CH3_L_FUSED"
+    (shape bidirectional)
+    (at 36.83 50.8 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid f975c3b9-8df7-5a19-9c5b-8622434597e4))
+  (symbol
+    (lib_id "Device:Fuse")
+    (at 43.18 44.45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid c55193e8-346e-572c-8e29-a503e3aab254)
+    (property "Reference" "F5"
+      (at 43.18 41.910000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Fuse"
+      (at 43.18 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:Fuse_Littelfuse_395Series"
+      (at 43.18 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 43.18 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Fuse"
+      (at 43.18 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "39212000000"
+      (at 43.18 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "C142678"
+      (at 43.18 50.800000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "Littelfuse"
+      (at 43.18 52.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 84e310b9-8ce4-5b5f-88be-1b57aa348def))
+    (pin "2"
+      (uuid 61a0aeee-04a4-568c-88c3-88c5258b213f))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "F5")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 43.18 40.64)
+      (xy 43.18 38.1))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 55524340-cb64-561b-b5a1-47df007ae1a2))
+  (label "CH4_L_IN"
+    (at 43.18 38.1 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left bottom))
+    (uuid 30415528-c13e-580c-92bf-d92084a7b337))
+  (wire
+    (pts
+      (xy 43.18 48.26)
+      (xy 43.18 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bb72b93a-aa12-5448-a2b9-e88f506f6f17))
+  (global_label "CH4_L_FUSED"
+    (shape bidirectional)
+    (at 43.18 50.8 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid c3415ac5-b5db-5ed1-a31c-7a23b13173a5))
+  (symbol
+    (lib_id "Connector:Screw_Terminal_01x02")
+    (at 64.77 31.75 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid a755f257-b043-57a2-8cac-c1abfd8a7aed)
+    (property "Reference" "X2"
+      (at 64.77 29.21 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Screw_Terminal_01x02"
+      (at 64.77 34.29 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal"
+      (at 64.77 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 64.77 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+      (at 64.77 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "WJ500V-5.08-2P"
+      (at 64.77 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "C8465"
+      (at 64.77 38.1 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "Ningbo Kangnex Elec"
+      (at 64.77 39.37 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 4a6c8c82-5211-5360-b2f3-5658775e467a))
+    (pin "2"
+      (uuid fa8e2468-b9e6-58a5-846c-1c7199306f97))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "X2")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 59.69 31.75)
+      (xy 57.15 31.75))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 53dcff18-2033-5db6-9ff1-5d3e774dcc54))
+  (label "CH1_L_IN"
+    (at 57.15 31.75 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right bottom))
+    (uuid a8410b0f-475a-5014-bba0-8ec489570faf))
+  (wire
+    (pts
+      (xy 59.69 34.29)
+      (xy 57.15 34.29))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 57df1597-2c8a-5fad-9b9f-95f02dc76379))
+  (global_label "CH1_L_OUT"
+    (shape bidirectional)
+    (at 57.15 34.29 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid a43d23ba-96fa-5634-a5ad-fdf60d147af0))
+  (symbol
+    (lib_id "Connector:Screw_Terminal_01x02")
+    (at 87.63 31.75 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid bbb94e06-64ac-5af3-a07f-88bdf260e3e3)
+    (property "Reference" "X3"
+      (at 87.63 29.21 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Screw_Terminal_01x02"
+      (at 87.63 34.29 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal"
+      (at 87.63 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 87.63 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+      (at 87.63 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "WJ500V-5.08-2P"
+      (at 87.63 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "C8465"
+      (at 87.63 38.1 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "Ningbo Kangnex Elec"
+      (at 87.63 39.37 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid ae5f2ba7-93fe-5bc6-8d25-278206718737))
+    (pin "2"
+      (uuid 5109d25c-df0a-5e5c-b719-aa3d6ac7dfe0))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "X3")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 82.55 31.75)
+      (xy 80.01 31.75))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d8df9117-025d-55a4-8ede-b5268f7646e4))
+  (label "CH2_L_IN"
+    (at 80.01 31.75 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right bottom))
+    (uuid 2a982dbb-29df-5e10-8fb6-be916aa6e662))
+  (wire
+    (pts
+      (xy 82.55 34.29)
+      (xy 80.01 34.29))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid dc9b4a6b-fc50-5baf-b6a5-ed03adee19ee))
+  (global_label "CH2_L_OUT"
+    (shape bidirectional)
+    (at 80.01 34.29 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid d3ac9e65-f4ab-5f84-8ef5-0c61d6f85290))
+  (symbol
+    (lib_id "Connector:Screw_Terminal_01x02")
+    (at 110.49 31.75 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid e201af94-3987-5fb9-9bac-9ac29afd5681)
+    (property "Reference" "X4"
+      (at 110.49 29.21 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Screw_Terminal_01x02"
+      (at 110.49 34.29 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal"
+      (at 110.49 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 110.49 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+      (at 110.49 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "WJ500V-5.08-2P"
+      (at 110.49 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "C8465"
+      (at 110.49 38.1 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "Ningbo Kangnex Elec"
+      (at 110.49 39.37 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid e1a3d2ed-3225-5d73-baa8-f712299c9303))
+    (pin "2"
+      (uuid 29ba0765-09da-5801-8b5e-4f6d48910bf1))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "X4")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 105.41 31.75)
+      (xy 102.87 31.75))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cf576b8a-5767-5d68-bc9c-3b38ebc6a865))
+  (label "CH3_L_IN"
+    (at 102.87 31.75 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right bottom))
+    (uuid 9215c4e9-1231-5684-bdcf-ff1195ea21c1))
+  (wire
+    (pts
+      (xy 105.41 34.29)
+      (xy 102.87 34.29))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ec7e658e-4d49-5e00-80eb-01875593564d))
+  (global_label "CH3_L_OUT"
+    (shape bidirectional)
+    (at 102.87 34.29 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid 9aabd890-6dbb-5d35-ae39-30c00fd80998))
+  (symbol
+    (lib_id "Connector:Screw_Terminal_01x02")
+    (at 133.35 31.75 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid f5b90e52-15ba-5900-bac0-d1157a334230)
+    (property "Reference" "X5"
+      (at 133.35 29.21 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Screw_Terminal_01x02"
+      (at 133.35 34.29 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal"
+      (at 133.35 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 133.35 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+      (at 133.35 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "WJ500V-5.08-2P"
+      (at 133.35 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "C8465"
+      (at 133.35 38.1 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "Ningbo Kangnex Elec"
+      (at 133.35 39.37 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 3184aff9-6da9-5ee4-832c-14fbaa822919))
+    (pin "2"
+      (uuid f7a2dee5-aad9-580b-9a4a-9544ceeccd2c))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "X5")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 128.27 31.75)
+      (xy 125.73 31.75))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a10f478e-9d35-541c-bbd6-1d330f943394))
+  (label "CH4_L_IN"
+    (at 125.73 31.75 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right bottom))
+    (uuid ba96965b-16be-54f6-a33a-0864a8d8e49d))
+  (wire
+    (pts
+      (xy 128.27 34.29)
+      (xy 125.73 34.29))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e0035a97-cb86-5d7e-8f3a-16895bff731c))
+  (global_label "CH4_L_OUT"
+    (shape bidirectional)
+    (at 125.73 34.29 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid 18df3abe-8a9b-5a33-86c8-d9f6f322acba))
+  (symbol
+    (lib_id "Graphic:Logo_Open_Hardware_Small")
+    (at 144.78 35.56 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid bcf4796b-8d61-5993-8585-c6dc79dc8b70)
+    (property "Reference" "LOGO1"
+      (at 144.78 33.02 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Logo_Open_Hardware_Small"
+      (at 144.78 38.1 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:Label_MainsWarning"
+      (at 144.78 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 144.78 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Open Hardware logo, small"
+      (at 144.78 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "UNSET-MPN"
+      (at 144.78 40.64 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "LOGO1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Graphic:Logo_Open_Hardware_Small")
+    (at 161.29 35.56 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid 179f5844-8e34-51c5-9aff-a36a7537fb4d)
+    (property "Reference" "LOGO2"
+      (at 161.29 33.02 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Logo_Open_Hardware_Small"
+      (at 161.29 38.1 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:Doodle_Scouter"
+      (at 161.29 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 161.29 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Open Hardware logo, small"
+      (at 161.29 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "UNSET-MPN"
+      (at 161.29 40.64 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "LOGO2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Graphic:Logo_Open_Hardware_Small")
+    (at 177.8 35.56 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (uuid 26f82f57-96e2-5680-b694-cf15906f7d25)
+    (property "Reference" "LOGO3"
+      (at 177.8 33.02 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Logo_Open_Hardware_Small"
+      (at 177.8 38.1 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "ssr4:Label_Terminals"
+      (at 177.8 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" "~"
+      (at 177.8 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Description" "Open Hardware logo, small"
+      (at 177.8 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "UNSET-MPN"
+      (at 177.8 40.64 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (reference "LOGO3")
+          (unit 1)))))
+  (sheet
+    (at 25.4 38.1)
+    (size 50.8 25.4)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
+    (uuid ee37a8e7-f873-5c1f-aad8-8e1c2553a1fd)
+    (property "Sheetname" "mcu1"
+      (at 25.4 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "circuit_mcu1.kicad_sch"
+      (at 25.4 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (page "2")))))
+  (sheet
+    (at 88.9 38.1)
+    (size 50.8 25.4)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
+    (uuid be8f6d84-9f1c-589f-b27f-0add0606e1de)
+    (property "Sheetname" "power1"
+      (at 88.9 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "circuit_power1.kicad_sch"
+      (at 88.9 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (page "3")))))
+  (sheet
+    (at 152.4 38.1)
+    (size 50.8 25.4)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
+    (uuid e4d77e74-04d3-50b9-9b06-cfbef0e2ec01)
+    (property "Sheetname" "ssr_channel1"
+      (at 152.4 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "circuit_ssr_channel1.kicad_sch"
+      (at 152.4 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (page "4")))))
+  (sheet
+    (at 215.9 38.1)
+    (size 50.8 25.4)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
+    (uuid 79d76998-d6d3-59c4-a2de-1fb3daff056f)
+    (property "Sheetname" "ssr_channel2"
+      (at 215.9 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "circuit_ssr_channel2.kicad_sch"
+      (at 215.9 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (page "5")))))
+  (sheet
+    (at 25.4 76.2)
+    (size 50.8 25.4)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
+    (uuid e5f602cc-c1d9-5ec9-94e0-efd49b1b40ab)
+    (property "Sheetname" "ssr_channel3"
+      (at 25.4 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "circuit_ssr_channel3.kicad_sch"
+      (at 25.4 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (page "6")))))
+  (sheet
+    (at 88.9 76.2)
+    (size 50.8 25.4)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
+    (uuid 3718509b-8e97-586a-8b53-98589bd252a4)
+    (property "Sheetname" "ssr_channel4"
+      (at 88.9 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "circuit_ssr_channel4.kicad_sch"
+      (at 88.9 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (page "7")))))
+  (sheet
+    (at 152.4 76.2)
+    (size 50.8 25.4)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
+    (uuid 11aed8ff-16b3-57e3-bc93-85e070c8fee9)
+    (property "Sheetname" "thermal_cutoff1"
+      (at 152.4 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "circuit_thermal_cutoff1.kicad_sch"
+      (at 152.4 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "circuit"
+        (path "/3ae7286e-6d2b-525c-ac7f-d6368d5ad3f3"
+          (page "8")))))
+  (sheet_instances
+    (path "/"
+      (page "1")))
+  (embedded_fonts no))

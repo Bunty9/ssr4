@@ -1,0 +1,48 @@
+# PC simulation (ESPHome `host` platform): the same logic as a Linux program. GPIO writes only
+# log "Setting pin N to HIGH/LOW"; there is no ADC, so the NTC node voltage comes from a
+# test-only number entity that tests set over the API (fwtest/, firmware/tests/), and the
+# hardware cutoff from a test-only switch.
+
+host:
+  mac_address: "02:00:00:00:55:04"
+
+logger:
+  level: DEBUG
+
+api:
+  port: ${sim_api_port}
+  encryption:
+    # TEST-ONLY key for the PC simulation, published on purpose. Never used on a real board.
+    key: "BzQ69+8J4zOZtsESTkd8VOwf0vydAFuS/bkkOhtNa+s="
+
+number:
+  - platform: template
+    id: sim_ntc_v
+    name: "SIM NTC voltage"
+    optimistic: true
+    min_value: 0
+    max_value: 3.3
+    step: 0.001
+    initial_value: 1.65 # 25 C
+    restore_value: false
+
+sensor:
+  - platform: template
+    id: ntc_v
+    lambda: "return id(sim_ntc_v).state;"
+    update_interval: 200ms
+
+switch:
+  - platform: template
+    id: sim_hw_cutoff
+    name: "SIM hardware cutoff"
+    optimistic: true
+    restore_mode: ALWAYS_OFF
+
+binary_sensor:
+  - platform: template
+    id: hw_cutoff
+    name: "Hardware over-temperature cutoff"
+    lambda: "return id(sim_hw_cutoff).state;"
+    on_state:
+      - script.execute: thermal_check

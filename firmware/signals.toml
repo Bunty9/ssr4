@@ -1,0 +1,54 @@
+# Firmware-facing signals of ssr4: what firmware may touch, by net name (pcbtools/hw.py).
+# `uv run pcb hw` resolves each to a U1 pin through the netlist, checks it against
+# datasheets/pinouts/ESP32-C3-MINI-1-H4X.verified.json and writes build/hw/ (contract.json and
+# one file per firmware stack). Firmware uses the generated names, never a typed GPIO number.
+controller = "U1"
+
+# SSR channels: CHn_CTRL drives the AO3400A gate; 100k gate pull-down keeps every SSR off
+# through reset and boot (spec "ssr4": all outputs OFF at power-up).
+[signals.ch1]
+net = "CH1_CTRL"
+role = "output"
+active = "high"
+safe = "inactive"
+
+[signals.ch2]
+net = "CH2_CTRL"
+role = "output"
+active = "high"
+safe = "inactive"
+
+[signals.ch3]
+net = "CH3_CTRL"
+role = "output"
+active = "high"
+safe = "inactive"
+
+[signals.ch4]
+net = "CH4_CTRL"
+role = "output"
+active = "high"
+safe = "inactive"
+
+# 3V3 - 10k - NTC node - NTC (10k, B3950) - GND, 100 nF at the pin.
+[signals.ntc]
+net = "NTC"
+role = "adc"
+
+[signals.status_led]
+net = "STATUS_LED"
+role = "output"
+active = "high"
+
+# BOOT button to GND with a pull-up (strapping pin: high = SPI boot).
+[signals.boot]
+net = "BOOT"
+role = "input"
+active = "low"
+
+# Hardware over-temperature cutoff (blocks/thermal_cutoff.py) on IO1: TMP302 OUT through 2k, low when
+# the board is above 60 C. Read-only for firmware; the cutoff itself needs no firmware.
+[signals.hw_overtemp]
+net = "HW_OT_SENSE"
+role = "input"
+active = "low"

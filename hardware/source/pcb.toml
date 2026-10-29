@@ -1,0 +1,30 @@
+# pcbtools settings for ssr4. Layer count comes from boardforge.toml [board].layers.
+
+[fab]
+name = "jlcpcb"                # jlcpcb | pcbway
+assembly = "standard"          # [assumed] JLCPCB standard PCBA incl. THT (SSRs, HLK, terminals)
+outer_copper_oz = 2            # [assumed] mains traces sized for 2 oz (blocks.calc.trace_width_mm)
+thickness_mm = 1.6
+panel = "routed"               # routed | vcut
+
+[rails]                        # every power net with its voltage, or [min, max]
+GND = 0
+"+5V" = [4.75, 5.25]           # [assumed] HLK-PM01 5 V (p.6); output tolerance not yet extracted: PLACEHOLDER
+VBUS = [4.75, 5.25]            # USB default power at the receptacle
+"+3V3" = [3.2, 3.4]            # [assumed] AMS1117-3.3 output; accuracy not yet extracted: PLACEHOLDER
+
+[order]
+surface_finish = "HASL (lead-free)"
+solder_mask = "green"
+silkscreen = "white"
+impedance_control = "no"
+ipc_class = "Class 2 (default)"
+
+[policy]
+# K = SSRs, PS = AC-DC module, F/RV = mains protection, X = screw terminals (IEC designator; plain
+# 2-pin terminals have no pinout to verify, so they are not in require_pinout_prefixes).
+require_approved_prefixes = ["U", "Q", "D", "J", "Y", "L", "K", "PS", "F", "RV", "X"]
+require_pinout_prefixes = ["U", "Q", "D", "J", "Y", "K", "PS"]
+exempt_lib_ids = ["Mechanical:*", "Graphic:*", "TestPoint:*"]
+exempt_ref_prefixes = ["H", "FID", "TP", "LOGO"]
+stock_max_age_days = 45

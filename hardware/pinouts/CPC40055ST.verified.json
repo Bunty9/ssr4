@@ -1,0 +1,103 @@
+{
+  "mpn": "CPC40055ST",
+  "package": "SuperSIP-4",
+  "datasheet": {
+    "file": "datasheets/CPC40055ST.pdf",
+    "revision": "DS-CPC40055ST-R04",
+    "pages": [
+      1,
+      2
+    ]
+  },
+  "pins": [
+    {
+      "number": "1",
+      "name": "AC Load",
+      "type": "passive",
+      "page": 1,
+      "aliases": [
+        "AC",
+        "AC LOAD",
+        "AC1"
+      ]
+    },
+    {
+      "number": "2",
+      "name": "AC Load",
+      "type": "passive",
+      "page": 1,
+      "aliases": [
+        "AC",
+        "AC LOAD",
+        "AC2"
+      ]
+    },
+    {
+      "number": "3",
+      "name": "+LED",
+      "type": "input",
+      "page": 1,
+      "aliases": [
+        "LED+",
+        "+ LED"
+      ]
+    },
+    {
+      "number": "4",
+      "name": "-LED",
+      "type": "input",
+      "page": 1,
+      "aliases": [
+        "LED-",
+        "- LED"
+      ]
+    }
+  ],
+  "params": {
+    "led_if_on_max_a": {
+      "value": 0.005,
+      "page": 2
+    },
+    "led_if_recommended_a": {
+      "value": 0.01,
+      "page": 2
+    },
+    "led_vf_max_v": {
+      "value": 1.5,
+      "page": 2
+    },
+    "led_vf_typ_v": {
+      "value": 1.2,
+      "page": 2
+    },
+    "led_vr_max_v": {
+      "value": 5,
+      "page": 2
+    },
+    "led_if_abs_max_a": {
+      "value": 0.05,
+      "page": 2
+    },
+    "load_current_max_a": {
+      "value": 5,
+      "page": 2
+    },
+    "load_voltage_max_vrms": {
+      "value": 280,
+      "page": 1
+    },
+    "isolation_vrms": {
+      "value": 2500,
+      "page": 2
+    }
+  },
+  "notes": "Pin Configuration p1: 1 and 2 labeled 'AC Load' (one bracket over pins 1-2), 3 '+ LED', 4 '- LED'. Pin abs_max_v on +LED: only 'Reverse Input Voltage 5 V max' (p2) is stated; the -5..5 range is derived from that single reverse rating plus the 50 mA current limit: forward voltage max not stated as an abs max. LED current to activate max 5 mA (IL=1 A resistive, 60 Hz, p2); footnote 3 p2: for high-noise, >60 Hz or highly inductive loads a minimum of 10 mA LED drive is recommended. Input VF 0.9 min / 1.2 typ / 1.5 max at IF=5 mA (p2). Input control current abs max 50 mA (p2), peak 1 A for 10 ms. Reverse input voltage abs max 5 V (p2). load_current_max_a = 5 Arms continuous with no heat sink, VL=20-280 Vrms (p2 Electrical Characteristics; p1 also: 20 Arms with 5 C/W heat sink; p2 shows 40 A at Tc=25 C); 5 A chosen as the no-heat-sink value. AC operating voltage 20-280 Vac(rms) p1; blocking voltage 800 Vp (p1,p2). Isolation input to output 2500 Vrms, 60 s (p1, p2). Off-state dV/dt min 1000 V/us; holding current max 50 mA; zero-cross turn-on voltage max 20 V first half-cycle. Pins 3/4 type is input per requester guidance; the LED is a two-terminal diode, so passive is also defensible. No abs_max_v written for the +LED pin because the datasheet states only a one-sided max (AMS1117 VIN 15 V, p2; AO3400A VDS 30 V, p1; CPC40055ST reverse input 5 V, p2); the lower bound is unknown. | ADJUDICATED 2026-10-22 by main session (human delegated decisions; see research/decisions.md): pins 1-2 named 'AC Load' as printed on p1 pin configuration, alias 'AC' (symbol name)",
+  "verified": {
+    "date": "2026-10-22",
+    "method": "two independent extractions agreed",
+    "passes": [
+      "CPC40055ST.pass1.json",
+      "CPC40055ST.pass2.json"
+    ]
+  }
+}

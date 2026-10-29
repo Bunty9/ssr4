@@ -1,0 +1,16 @@
+# ssr4 on the PC: same logic and pins as ssr4.yaml, ESPHome `host` platform instead of the
+# ESP32-C3. Used by firmware/tests (pytest + labgrid target targets/host.yaml).
+
+substitutions:
+  name: ssr4-sim
+  friendly_name: SSR4 sim
+  sim_api_port: "16053"
+
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+
+packages:
+  pins: !include pins.yaml
+  logic: !include packages/logic.yaml
+  hw: !include packages/sim_host.yaml

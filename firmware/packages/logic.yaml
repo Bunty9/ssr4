@@ -1,0 +1,191 @@
+# ssr4 behaviour, shared by every build (real board: ../ssr4.yaml, PC simulation: ../sim.yaml).
+# Pins come from the generated hardware contract (${chN_pin} etc., `uv run pcb hw`); the
+# hardware package of each build defines `ntc_v` (the NTC node voltage), `hw_cutoff` (the
+# hardware over-temperature cutoff, which switches the SSRs off by itself) and the network.
+#
+# Drives are active-high with 100k gate pull-downs (contract: safe = inactive), so a reset or a
+# low glitch only means OFF.
+
+substitutions:
+  # Over-temperature cutoff (board NTC). 55 C keeps margin to the HLK-PM01's 60 C ambient
+  # limit (datasheet p9), the lowest-rated part in the case. Latches until resume_c.
+  cutoff_c: "55"
+  resume_c: "45"
+  # NTC node voltage outside these limits is a sensor fault: all channels off, ON refused.
+  # Open limit: the top of the ESP32-C3 ADC's specified range at 12 dB (ATTEN3, 0-2500 mV,
+  # ESP32-C3 datasheet v2.4 Table 5-6 p56, datasheets/ESP32-C3FH4X.pdf). Above it the reading
+  # is not trusted; an open NTC reads there. 2.5 V is a board temperature of about 1.4 C, so
+  # the board refuses to switch below that (fail-safe).
+  # Short limit: the node voltage at 110 C, = blocks.calc.ntc_divider_v(110, 3.3, 10e3, 10e3,
+  # 3950) (checked by firmware/tests/test_config.py).
+  ntc_open_v: "2.5"
+  ntc_short_v: "0.166"
+
+esphome:
+  on_boot:
+    priority: 600
+    then:
+      - switch.turn_off: ch1
+      - switch.turn_off: ch2
+      - switch.turn_off: ch3
+      - switch.turn_off: ch4
+
+status_led:
+  pin: ${status_led_pin}
+
+globals:
+  - id: overheated # latched at cutoff_c or by a hardware trip, released at resume_c
+    type: bool
+    restore_value: false
+    initial_value: "false"
+  - id: ntc_fault # NTC voltage outside its trusted range; true until the first good sample
+    type: bool
+    restore_value: false
+    initial_value: "true"
+
+script:
+  # Runs after every temperature sample (ssr_temp publishes once per ntc_v sample, NaN for a
+  # degenerate reading), so ntc_v and ssr_temp are from the same sample.
+  - id: thermal_check
+    then:
+      - lambda: |-
+          const float v = id(ntc_v).state;
+          const float t = id(ssr_temp).state;
+          const bool fault = std::isnan(v) || v >= ${ntc_open_v} || v <= ${ntc_short_v} || std::isnan(t);
+          if (fault != id(ntc_fault)) {
+            id(ntc_fault) = fault;
+            if (fault) {
+              ESP_LOGW("thermal", "NTC fault (%.3f V): all channels off", v);
+            } else {
+              ESP_LOGI("thermal", "NTC reading valid (%.3f V, %.1f C)", v, t);
+            }
+          }
+          if (id(hw_cutoff).state && !id(overheated)) {
+            // the hardware switch tripped: latch, so loads stay off after it releases (it
+            // releases about 10 C lower) until the NTC reads resume_c
+            id(overheated) = true;
+            ESP_LOGW("thermal", "hardware over-temperature cutoff: all channels off until %.0f C", ${resume_c}.0f);
+          } else if (!fault && !id(overheated) && t >= ${cutoff_c}) {
+            id(overheated) = true;
+            ESP_LOGW("thermal", "over-temperature (%.1f C): all channels off", t);
+          } else if (!fault && id(overheated) && !id(hw_cutoff).state && t <= ${resume_c}) {
+            id(overheated) = false;
+            ESP_LOGI("thermal", "cooled to %.1f C: channels may be switched on", t);
+          }
+          if (id(ntc_fault) || id(overheated) || id(hw_cutoff).state) {
+            for (auto *ch : {id(ch1), id(ch2), id(ch3), id(ch4)}) {
+              if (ch->state) ch->turn_off();
+            }
+          }
+
+switch:
+  - platform: gpio
+    id: ch1
+    pin: ${ch1_pin}
+    restore_mode: ALWAYS_OFF
+    internal: true
+  - platform: gpio
+    id: ch2
+    pin: ${ch2_pin}
+    restore_mode: ALWAYS_OFF
+    internal: true
+  - platform: gpio
+    id: ch3
+    pin: ${ch3_pin}
+    restore_mode: ALWAYS_OFF
+    internal: true
+  - platform: gpio
+    id: ch4
+    pin: ${ch4_pin}
+    restore_mode: ALWAYS_OFF
+    internal: true
+  # What Home Assistant sees: ON is refused while overheated, the NTC is faulty or the hardware
+  # cutoff has tripped (then the SSRs are off whatever the GPIOs say; firmware follows suit).
+  - platform: template
+    id: ch1_ui
+    name: "Channel 1"
+    restore_mode: ALWAYS_OFF
+    lambda: "return id(ch1).state;"
+    turn_on_action:
+      - if:
+          condition:
+            lambda: "return !id(overheated) && !id(ntc_fault) && !id(hw_cutoff).state;"
+          then:
+            - switch.turn_on: ch1
+    turn_off_action:
+      - switch.turn_off: ch1
+  - platform: template
+    id: ch2_ui
+    name: "Channel 2"
+    restore_mode: ALWAYS_OFF
+    lambda: "return id(ch2).state;"
+    turn_on_action:
+      - if:
+          condition:
+            lambda: "return !id(overheated) && !id(ntc_fault) && !id(hw_cutoff).state;"
+          then:
+            - switch.turn_on: ch2
+    turn_off_action:
+      - switch.turn_off: ch2
+  - platform: template
+    id: ch3_ui
+    name: "Channel 3"
+    restore_mode: ALWAYS_OFF
+    lambda: "return id(ch3).state;"
+    turn_on_action:
+      - if:
+          condition:
+            lambda: "return !id(overheated) && !id(ntc_fault) && !id(hw_cutoff).state;"
+          then:
+            - switch.turn_on: ch3
+    turn_off_action:
+      - switch.turn_off: ch3
+  - platform: template
+    id: ch4_ui
+    name: "Channel 4"
+    restore_mode: ALWAYS_OFF
+    lambda: "return id(ch4).state;"
+    turn_on_action:
+      - if:
+          condition:
+            lambda: "return !id(overheated) && !id(ntc_fault) && !id(hw_cutoff).state;"
+          then:
+            - switch.turn_on: ch4
+    turn_off_action:
+      - switch.turn_off: ch4
+
+sensor:
+  # 3V3 - 10k - NTC node - NTC - GND. NTC SDNT1608X103F3950FTF: R25 10k, B25/50 3950 K
+  # (SDNT series datasheet p3, research/parts.csv).
+  - platform: resistance
+    id: ntc_r
+    sensor: ntc_v
+    configuration: DOWNSTREAM
+    resistor: 10kOhm
+    reference_voltage: 3.3V
+  - platform: ntc
+    id: ssr_temp
+    name: "SSR temperature"
+    sensor: ntc_r
+    calibration:
+      b_constant: 3950
+      reference_temperature: 25C
+      reference_resistance: 10kOhm
+    on_value:
+      - script.execute: thermal_check
+  - platform: uptime
+    name: "Uptime"
+
+binary_sensor:
+  - platform: template
+    name: "Over-temperature"
+    lambda: "return id(overheated);"
+  - platform: template
+    name: "NTC fault"
+    lambda: "return id(ntc_fault);"
+  - platform: status
+    name: "Status"
+
+button:
+  - platform: restart
+    name: "Restart"

@@ -1,0 +1,10 @@
+Board: ssr4
+Fab: pcbway   Assembly: standard
+Layers: 2   Thickness: 1.6 mm   Outer copper: 2 oz
+surface_finish: HASL (lead-free)
+solder_mask: green
+silkscreen: white
+impedance_control: no
+ipc_class: Class 2 (default)
+
+Choose these options on the fab's order form; they are NOT read from the Gerbers.

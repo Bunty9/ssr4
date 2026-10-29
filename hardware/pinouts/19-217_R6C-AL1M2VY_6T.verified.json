@@ -1,0 +1,62 @@
+{
+  "mpn": "19-217/R6C-AL1M2VY/6T",
+  "package": "0603 LED",
+  "datasheet": {
+    "file": "datasheets/19-217_R6C-AL1M2VY_6T.pdf",
+    "revision": "Ver.3, 02/25/2022",
+    "pages": [
+      2,
+      3,
+      6
+    ]
+  },
+  "pins": [
+    {
+      "number": "1",
+      "name": "K",
+      "type": "passive",
+      "page": 6,
+      "aliases": [
+        "CATHODE",
+        "-"
+      ]
+    },
+    {
+      "number": "2",
+      "name": "A",
+      "type": "passive",
+      "page": 6,
+      "aliases": [
+        "ANODE",
+        "+"
+      ]
+    }
+  ],
+  "params": {
+    "vf_min_v": {
+      "value": 1.7,
+      "page": 3
+    },
+    "vf_max_v": {
+      "value": 2.2,
+      "page": 3
+    },
+    "vf_test_current_a": {
+      "value": 0.005,
+      "page": 3
+    },
+    "if_max_a": {
+      "value": 0.025,
+      "page": 2
+    }
+  },
+  "notes": "POLARITY WARNING: the datasheet's own circled numbering is the OPPOSITE of the KiCad LED convention. Package Dimension drawing p6: pad (1) = + (anode), pad (2) = - (cathode); 'Cathode Mark' arrow on the bottom view points at pad (2). Pins here are numbered per KiCad convention (pad 1 = K, pad 2 = A) as instructed, so the physical cathode side (datasheet pad 2) must be KiCad pad 1; verify the footprint orientation/cathode marking, do not map by datasheet number. vr_max_v NOT extracted: the datasheet gives no absolute maximum reverse voltage; only IR max 10 uA at VR=5 V as a test condition, and note 4 p3 says 'The device is not designed for reverse operation' (p3). VF 1.70 min / 2.20 max at IF=5 mA (p3; typ not given), tolerance +/-0.05 V. IF max 25 mA continuous, 50 mA peak (duty 1/10 @ 1 kHz) p2. Brilliant red AlGaInP, Pd 60 mW. Datasheet pages p1-11 total. | ADJUDICATED 2026-10-22 by main session (human delegated decisions; see research/decisions.md): package text set to the canonical brief string '0603 LED' (free text, not a datasheet fact)",
+  "verified": {
+    "date": "2026-10-22",
+    "method": "two independent extractions agreed",
+    "passes": [
+      "19-217_R6C-AL1M2VY_6T.pass1.json",
+      "19-217_R6C-AL1M2VY_6T.pass2.json"
+    ]
+  }
+}

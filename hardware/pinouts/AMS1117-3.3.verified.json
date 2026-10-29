@@ -1,0 +1,73 @@
+{
+  "mpn": "AMS1117-3.3",
+  "package": "SOT-223",
+  "datasheet": {
+    "file": "datasheets/AMS1117-3.3.pdf",
+    "revision": "unrevised (Advanced Monolithic Systems)",
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "pins": [
+    {
+      "number": "1",
+      "name": "GND/ADJ",
+      "type": "ground",
+      "page": 1,
+      "aliases": [
+        "GND",
+        "ADJ"
+      ]
+    },
+    {
+      "number": "2",
+      "name": "VOUT",
+      "type": "power_out",
+      "page": 1,
+      "aliases": [
+        "OUT",
+        "VO"
+      ]
+    },
+    {
+      "number": "3",
+      "name": "VIN",
+      "type": "power_in",
+      "page": 1,
+      "aliases": [
+        "IN",
+        "VI"
+      ]
+    }
+  ],
+  "params": {
+    "vout_v": {
+      "value": 3.3,
+      "page": 2
+    },
+    "dropout_max_v": {
+      "value": 1.3,
+      "page": 3
+    },
+    "dropout_test_current_a": {
+      "value": 0.8,
+      "page": 3
+    },
+    "vin_max_v": {
+      "value": 15,
+      "page": 2
+    }
+  },
+  "notes": "Pin connections p1: SOT-223 pins 1 GND/ADJ, 2 VOUT, 3 VIN. 'TAB IS OUTPUT' is printed next to the TO-252 front view on p1; the SOT-223 top view does not label the tab explicitly, so tab=pad 4=VOUT is inferred from that note (same part family, standard SOT-223 practice). Input voltage abs max 15 V (p2); lower abs_max 0 is a placeholder floor not stated by the datasheet, only the 15 V max is stated: treat min as unknown. Fixed-3.3 V output 3.3 V typ (3.251..3.349 at VIN=4.8 V, 25 C) p2. Dropout max 1.3 V at IOUT=0.8 A (dV=1%) p3; datasheet says dropout specified up to 0.8 A. output_cap_min_uf: datasheet says 'addition of 22uF solid tantalum on the output will ensure stability for all operating conditions' and 'smaller capacitors can be used' without ADJ bypass (p4): no explicit minimum is stated; 22 uF is the recommended stable value, NOT a stated minimum. Minimum load 10 mA guaranteed-regulation (p3, Note 5; typ 5 mA). No recommended operating input range stated. No abs_max_v written for the VIN pin because the datasheet states only a one-sided max (AMS1117 VIN 15 V, p2; AO3400A VDS 30 V, p1; CPC40055ST reverse input 5 V, p2); the lower bound is unknown. | ADJUDICATED 2026-10-22 by main session (human delegated decisions; see research/decisions.md): output_cap_min_uf removed: p4 says 22 uF tantalum 'will ensure stability for all operating conditions', a sufficient condition, not a stated minimum (pass2 omitted it) | ADJUDICATED 2026-10-22 by main session: footprint is SOT-223-3_TabPin2 (KiCad's default for this symbol), where the tab is part of pad 2 = VOUT ('TAB IS OUTPUT', p1); separate tab pin 4 removed. Aliases VO/VI are the KiCad symbol's names.",
+  "verified": {
+    "date": "2026-10-22",
+    "method": "two independent extractions agreed",
+    "passes": [
+      "AMS1117-3.3.pass1.json",
+      "AMS1117-3.3.pass2.json"
+    ]
+  }
+}
