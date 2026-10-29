@@ -78,6 +78,7 @@ layers are in [`hardware/ssr4-schematic.pdf`](hardware/ssr4-schematic.pdf) and
 | 3. Flash ESPHome over USB-C and add it to Home Assistant | [Firmware](docs/firmware.md) |
 | 4. Bring it up step by step: USB, thermal checks, 24 VAC loads, first mains | [Bring-up](docs/bring-up.md) |
 | 5. Wire it into a switchboard | [Installation](docs/installation.md) |
+| 5b. Design a heat sink and an enclosure (STEP files included) | [Mechanical](docs/mechanical.md) |
 | 6. Change it, test it, contribute | [Development](docs/development.md) · [Contributing](CONTRIBUTING.md) |
 
 ## How it has been checked
@@ -117,7 +118,8 @@ dashboard always shows what the hardware is really doing.
 ## Repository layout
 
 ```
-hardware/      KiCad 10 project, libraries, circuit source (Python), fabrication files, pinouts, PDFs
+hardware/      KiCad 10 project, libraries, circuit source (Python), fabrication files, pinouts, PDFs,
+               mechanical/ (STEP assembly, board STEP, outline DXF)
 firmware/      ESPHome configuration (board + PC simulation), generated pin map, tests
 fwtest/        labgrid-based test harness used by the firmware tests
 validation/    test results, calculations, SPICE cross-check of this snapshot
@@ -139,4 +141,4 @@ follows the [Contributor Covenant](CODE_OF_CONDUCT.md).
 Details and credits (including the scouter doodle, after fan art by camarinox; Dragon Ball ©
 Bird Studio/Shueisha, Toei Animation) in [LICENSES/README.md](LICENSES/README.md).
 
-<sub>Published from source commit `0ba30d9` on 2026-10-29.</sub>
+<sub>Published from source commit `4ecfc79` on 2026-10-29.</sub>
